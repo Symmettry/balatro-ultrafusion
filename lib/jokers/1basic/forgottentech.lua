@@ -22,7 +22,7 @@ SMODS.Joker {
             "This Joker gains {X:mult,C:white}X#2#{} Mult at start of round",
             "and whenever a playing card is added to your deck",
             "{C:inactive}(Currently {X:mult,C:white}X#3# Mult{}{C:inactive}){}",
-            "{C:inactive}(Marble + Hologram){}"
+            "{C:inactive}(Marble Joker + Hologram){}"
         }
     },
 
@@ -67,7 +67,7 @@ SMODS.Joker {
 
 FusionJokers.fusions:register_fusion{
     jokers = {
-        { name = "j_marble_joker" },
+        { name = "j_marble" },
         { name = "j_hologram" },
     },
     result_joker = "j_ultrafusion_forgotten_technology",
