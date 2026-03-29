@@ -21,7 +21,7 @@ SMODS.Joker {
             "Played cards give {C:blue}+#1# Chips{} when scored",
             "This Joker gains {X:mult,C:white}X#2#{} Mult at start of round",
             "and whenever a playing card is added to your deck",
-            "{C:inactive}(Currently {X:mult,C:white}X#3# Mult{}{C:inactive}){}",
+            "{C:inactive}(Currently {X:mult,C:white}X#3#{} {C:inactive}Mult){}",
             "{C:inactive}(Marble Joker + Hologram){}"
         }
     },

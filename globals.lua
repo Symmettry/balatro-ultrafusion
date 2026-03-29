@@ -2,19 +2,21 @@ local GET_RAR = function (requested, fallback, mod)
     return next(SMODS.find_mod(mod)) and requested or fallback
 end
 
-FUSION = {
+UF = {
     DESCRIPTIONS = {
     },
 
     RARITY = {
         GET = GET_RAR,
-    }
+    },
+
+    U = {}
 }
 
 local function load_desc(name, tooltip_key, desc_key)
     G.localization.descriptions.Other[tooltip_key] = {
         name = name,
-        text = FUSION.DESCRIPTIONS[desc_key]
+        text = UF.DESCRIPTIONS[desc_key]
     }
 end
 

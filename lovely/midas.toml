@@ -1,0 +1,14 @@
+[manifest]
+version = "1.0.0"
+dump_lua = false
+priority = 0
+
+[[patches]]
+[patches.pattern]
+target = "card.lua"
+pattern = "    elseif self.seal == 'Gold' and not self.ability.extra_enhancement then"
+position = "at"
+payload = '''
+    elseif self.seal == 'Gold' and not self.ability.extra_enhancement and not (UF and UF.U and UF.U.king_midas_active and UF.U.king_midas_active()) then
+'''
+match_indent = true

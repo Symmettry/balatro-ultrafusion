@@ -30,25 +30,9 @@ SMODS.Joker {
     end,
 
     calculate = function(self, card, context)
-        if context.setting_blind and not context.blueprint and context.blind.boss then
-            local ante = (G.GAME.round_resets and G.GAME.round_resets.ante) or 0
-            local payout = card.ability.extra.dollars * ante
-            
-            G.E_MANAGER:add_event(Event({
-                func = function()
-                    G.E_MANAGER:add_event(Event({
-                        func = function()
-                            G.GAME.blind:disable()
-                            play_sound('timpani')
-                            delay(0.4)
-                            return true
-                        end
-                    }))
-                    SMODS.calculate_effect({ message = localize('ph_boss_disabled') }, card)
-                    return true
-                end
-            }))
-
+        if UF.U.to_disable_boss_blind(context) then
+            local payout = UF.U.boss_blind_payout(card.ability.extra.dollars)
+            UF.U.disable_boss_blind_with_event(card)
             return {
                 dollars = payout
             }, true
@@ -69,6 +53,6 @@ FusionJokers.fusions:register_fusion{
         { name = "j_matador" },
         { name = "j_chicot" },
     },
-    result_joker = "j_ultrafusion_martial_arts",
+    result_joker = "j_ultrafusion_el_triunvirate",
     cost = 10,
 }

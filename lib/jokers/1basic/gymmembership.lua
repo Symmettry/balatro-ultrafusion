@@ -29,13 +29,10 @@ SMODS.Joker {
     end,
 
     calculate = function(self, card, context)
-        if context.joker_main then
-            local hands_left = (G.GAME.current_round and G.GAME.current_round.hands_left) or 0
-            if hands_left == 0 then
-                return {
-                    xmult = card.ability.extra.x_mult,
-                }
-            end
+        if UF.U.joker_main(context) and UF.U.is_final_hand() then
+            return {
+                xmult = card.ability.extra.x_mult,
+            }
         end
     end
 }

@@ -17,29 +17,7 @@ SMODS.Joker {
             "{C:inactive}(Four Fingers + Shortcut){}"
         }
     },
-
-    add_to_deck = function(self, card, from_debuff)
-        G.GAME.back_alley = true
-    end,
-    remove_from_deck = function(self, card, from_debuff)
-        G.GAME.back_alley = false
-    end,
 }
-
-local old_four_fingers = SMODS.four_fingers
-SMODS.four_fingers = function(hand)
-    if G and G.GAME and G.GAME.back_alley then
-        return 4
-    end
-    return old_four_fingers(hand)
-end
-local smods_shortcut_ref = SMODS.shortcut
-function SMODS.shortcut()
-    if G and G.GAME and G.GAME.back_alley then
-        return true
-    end
-    return smods_shortcut_ref()
-end
 
 FusionJokers.fusions:register_fusion{
     jokers = {

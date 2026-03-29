@@ -4,7 +4,7 @@ SMODS.Joker {
     -- atlas = "jokers_142x190",
     -- pos = { x = 2, y = 0 },
 
-    rarity = "fusion",
+    rarity = "advfusion",
     blueprint_compat = true,
 
     config = {
@@ -40,13 +40,7 @@ SMODS.Joker {
             }
         end
         if context.joker_main then
-            local queens = 0
-
-            for _, held_card in ipairs(G.hand.cards or {}) do
-                if held_card:get_id() == 12 and held_card:is_suit("Spades") then
-                    queens = queens + 1
-                end
-            end
+            local queens = UF.U.held_spade_queens()
 
             local xmult = 1
             for i = 1, queens do

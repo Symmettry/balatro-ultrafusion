@@ -32,12 +32,7 @@ SMODS.Joker {
 
     calculate = function(self, card, context)
         if context.joker_main then
-            local queens = 0
-            for _, held_card in ipairs(G.hand.cards or {}) do
-                if held_card:get_id() == 12 then
-                    queens = queens + 1
-                end
-            end
+            local queens = UF.U.held_queens()
 
             return {
                 mult = card.ability.extra.mult + (queens * card.ability.extra.queen_mult)

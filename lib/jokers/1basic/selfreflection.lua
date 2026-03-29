@@ -19,19 +19,11 @@ SMODS.Joker {
     },
 
     calculate = function(self, card, context)
-        if context.modify_scoring_hand and not context.blueprint then
-            return {
-                add_to_hand = true
-            }
+        if UF.U.modify_scoring_hand_all_played(context) then
+            return { add_to_hand = true }
         end
     end
 }
-
-local card_is_face_ref = Card.is_face
-function Card:is_face(from_boss)
-    return card_is_face_ref(self, from_boss)
-        or (self:get_id() and next(SMODS.find_card("j_ultrafusion_self_reflection")))
-end
 
 FusionJokers.fusions:register_fusion{
     jokers = {
