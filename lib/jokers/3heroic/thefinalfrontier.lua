@@ -1,7 +1,7 @@
 SMODS.Joker {
 	key = "the_final_frontier",
 
-	rarity = "legfusion",
+	rarity = "heroicfusion",
 	blueprint_compat = true,
 	perishable_compat = false,
 	eternal_compat = false,

@@ -1,7 +1,7 @@
 SMODS.Joker {
 	key = "the_foretold_devil",
 
-	rarity = "legfusion",
+	rarity = "heroicfusion",
 	blueprint_compat = true,
 	cost = 24,
 

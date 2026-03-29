@@ -1,7 +1,7 @@
 SMODS.Joker {
     key = "arcturus_high_sovereign_of_mana",
 
-    rarity = "ultfusion",
+    rarity = "legfusion",
     blueprint_compat = true,
     perishable_compat = false,
 

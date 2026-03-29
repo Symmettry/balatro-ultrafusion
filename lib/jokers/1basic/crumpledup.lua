@@ -1,23 +1,23 @@
 SMODS.Joker {
-    key = "shredded",
+    key = "crumpled_up",
     
     -- atlas = "jokers_142x190",
-    -- pos = { x = 2, y = 0 },
+    -- pos = { x = 5, y = 0 },
 
-    rarity = "fusion",
+    rarity = "advfusion",
     blueprint_compat = true,
 
     config = {
         extra = {
-            mult = 30,
+            mult = 31
         }
     },
 
     loc_txt = {
-        name = "Shredded Joker",
+        name = "Crumpled Up Joker",
         text = {
             "{C:mult}+#1# Mult{}",
-            "{C:inactive}(Half Joker + Misprint){}",
+            "{C:inactive}(Joker + Half Joker + Misprint){}"
         }
     },
 
@@ -30,7 +30,7 @@ SMODS.Joker {
     calculate = function(self, card, context)
         if context.joker_main then
             return {
-                mult = card.ability.extra.mult,
+                mult = card.ability.extra.mult
             }
         end
     end
@@ -38,9 +38,10 @@ SMODS.Joker {
 
 FusionJokers.fusions:register_fusion{
     jokers = {
+        { name = "j_joker" },
         { name = "j_half" },
         { name = "j_misprint" },
     },
-    result_joker = "j_ultrafusion_shredded",
+    result_joker = "j_ultrafusion_crumpled_up",
     cost = 5,
 }

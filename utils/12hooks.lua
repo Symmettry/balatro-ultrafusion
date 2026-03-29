@@ -77,6 +77,30 @@ function UF.U.install_hooks()
             self.sell_cost_label = self.facing == 'back' and '?' or self.sell_cost
         end
     end
+
+    local card_get_id_ref = Card.get_id
+    function Card:get_id()
+        local id = card_get_id_ref(self)
+
+        if next(SMODS.find_card("j_ultrafusion_the_galactic_federation")) then
+            if self.config and self.config.center == G.P_CENTERS.m_gold then
+                return 13
+            end
+        end
+
+        return id
+    end
+
+    local card_is_suit_ref = Card.is_suit
+    function Card:is_suit(suit, bypass_debuff, flush_calc)
+        if next(SMODS.find_card("j_ultrafusion_the_galactic_federation")) then
+            if self.config and self.config.center == G.P_CENTERS.m_gold then
+                return true
+            end
+        end
+
+        return card_is_suit_ref(self, suit, bypass_debuff, flush_calc)
+    end
 end
 
 UF.U._card_get_id_ref = UF.U._card_get_id_ref or Card.get_id

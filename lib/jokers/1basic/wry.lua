@@ -9,23 +9,29 @@ SMODS.Joker {
 
     config = {
         extra = {
-            chips = 80,
-            mult = 10,
+            chips = 50,
+            mult = 8,
+            xmult = 2
         }
     },
 
     loc_txt = {
         name = "Wry Joker",
         text = {
-            "When playing a {C:attention}Flush{},",
-            "{C:blue}+#1# Chips{} and {C:mult}+#2# Mult{}",
-            "{C:inactive}(Droll Joker + Crafty Joker){}"
+            "If played hand contains a {C:attention}Flush{},",
+            "{C:blue}+#1# Chips{}, {C:mult}+#2# Mult{},",
+            "and {X:mult,C:white}X#3#{} Mult",
+            "{C:inactive}(Droll Joker + Crafty Joker + The Tribe){}"
         }
     },
 
     loc_vars = function(self, info_queue, card)
         return {
-            vars = { card.ability.extra.chips, card.ability.extra.mult }
+            vars = {
+                card.ability.extra.chips,
+                card.ability.extra.mult,
+                card.ability.extra.xmult
+            }
         }
     end,
 
@@ -34,6 +40,7 @@ SMODS.Joker {
             return {
                 chips = card.ability.extra.chips,
                 mult = card.ability.extra.mult,
+                xmult = card.ability.extra.xmult
             }
         end
     end
@@ -43,6 +50,7 @@ FusionJokers.fusions:register_fusion{
     jokers = {
         { name = "j_droll" },
         { name = "j_crafty" },
+        { name = "j_tribe" },
     },
     result_joker = "j_ultrafusion_wry",
     cost = 4,

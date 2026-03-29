@@ -1,7 +1,7 @@
 SMODS.Joker {
     key = "the_grand_archmage",
 
-    rarity = "legfusion",
+    rarity = "heroicfusion",
     blueprint_compat = true,
     perishable_compat = false,
 

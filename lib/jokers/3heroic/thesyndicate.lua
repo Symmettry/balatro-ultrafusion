@@ -1,7 +1,7 @@
 SMODS.Joker {
     key = "the_syndicate",
     
-    rarity = "legfusion",
+    rarity = "heroicfusion",
     blueprint_compat = false,
     perishable_compat = false,
 

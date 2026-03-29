@@ -1,7 +1,7 @@
 SMODS.Joker {
 	key = "the_overlord_of_greed",
 
-	rarity = "legfusion",
+	rarity = "heroicfusion",
 	blueprint_compat = true,
 
 	config = {

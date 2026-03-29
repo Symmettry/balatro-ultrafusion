@@ -156,19 +156,31 @@ local function tier_label(tier)
     if tier == 1 then return "Base Jokers" end
     if tier == 2 then return "Basic Fusions" end
     if tier == 3 then return "Advanced Fusions" end
-    if tier == 4 then return "Legendary Fusions" end
+    if tier == 4 then return "Heroic Fusions" end
+    if tier == 5 then return "Legendary Fusions" end
+    if tier == 6 then return "Ultimate Fusions" end
     return "Tier " .. tostring(tier)
 end
 
 local function tier_colors(tier)
     if tier == 1 then
-        return "#cccccc", "#f8f8f8"
+        -- base tier below basic should still be gray
+        return "#888888", "#f0f0f0"
     elseif tier == 2 then
-        return "#a8d5ff", "#dff1ff"
+        -- Basic
+        return "#f7d762", "#feffb5"
     elseif tier == 3 then
-        return "#ffd27a", "#fff0cc"
+        -- Advanced Fusion
+        return "#36b43b", "#e3f7e4"
     elseif tier == 4 then
-        return "#ff9db2", "#ffe0e8"
+        -- Heroic Fusion
+        return "#0e6780", "#d9eef4"
+    elseif tier == 5 then
+        -- Legendary Fusion
+        return "#8409c2", "#eedcff"
+    elseif tier == 6 then
+        -- Ultimate Fusion
+        return "#5f0000", "#f4d9d9"
     else
         return "#dddddd", "#f3f3f3"
     end

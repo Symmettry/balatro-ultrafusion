@@ -4,7 +4,7 @@ SMODS.Joker {
     -- atlas = "jokers_142x190",
     -- pos = { x = 2, y = 0 },
 
-    rarity = "legfusion",
+    rarity = "heroicfusion",
     blueprint_compat = false,
     eternal_compat = false,
 
