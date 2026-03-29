@@ -1,7 +1,7 @@
 SMODS.Joker {
 	key = "crypto_wallet",
 
-	rarity = "advfusion",
+	rarity = "ultrafusion_advfusion",
 	blueprint_compat = true,
 	cost = 16,
 
@@ -11,7 +11,8 @@ SMODS.Joker {
 			chips = 30,
 			xmult = 0.3,
 			dollars = 3,
-			odds = 20
+			numerator = 1,
+			denominator = 20
 		}
 	},
 
@@ -42,6 +43,13 @@ SMODS.Joker {
 			end
 		end
 
+		local num, den = SMODS.get_probability_vars(
+			card,
+			card.ability.extra.numerator,
+			card.ability.extra.denominator,
+			"ultrafusion_crypto_wallet_zero"
+		)
+
 		local tripled = G.GAME and G.GAME.dollars and G.GAME.dollars <= 0
 		local scalar = tripled and 3 or 1
 
@@ -51,8 +59,8 @@ SMODS.Joker {
 				card.ability.extra.chips,
 				card.ability.extra.xmult,
 				card.ability.extra.dollars,
-				(G.GAME and G.GAME.probabilities and G.GAME.probabilities.normal or 1),
-				card.ability.extra.odds,
+				num,
+				den,
 				count * card.ability.extra.chips * scalar,
 				1 + count * card.ability.extra.xmult * scalar,
 				count * card.ability.extra.dollars * scalar
@@ -74,9 +82,13 @@ SMODS.Joker {
 
 	calculate = function(self, card, context)
 		if context.setting_blind and not context.blueprint then
-			local odds = (G.GAME and G.GAME.probabilities and G.GAME.probabilities.normal or 1) / card.ability.extra.odds
-
-			if pseudorandom('ultrafusion_crypto_wallet_zero') < odds then
+			if SMODS.pseudorandom_probability(
+				card,
+				"ultrafusion_crypto_wallet_zero",
+				card.ability.extra.numerator,
+				card.ability.extra.denominator,
+				"ultrafusion_crypto_wallet_zero"
+			) then
 				ease_dollars(-(G.GAME.dollars or 0))
 				return nil, true
 			end

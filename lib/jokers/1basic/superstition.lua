@@ -5,12 +5,19 @@ SMODS.Joker {
 	blueprint_compat = true,
 	cost = 8,
 
+	config = {
+		extra = {
+			numerator = 1,
+			denominator = 2
+		}
+	},
+
 	loc_txt = {
 		name = "Superstition",
 		text = {
 			"If played hand contains",
 			"an {C:attention}8{} or a {C:attention}Straight{},",
-			"{C:green}#1# in 2{} chance to create a {C:tarot}Tarot{} card",
+			"{C:green}#1# in #2#{} chance to create a {C:tarot}Tarot{} card",
 			"Effect is guaranteed if played hand",
 			"is a {C:attention}Straight{} containing an {C:attention}8{}",
 			"{C:inactive}(8 Ball + Superposition){}"
@@ -18,9 +25,17 @@ SMODS.Joker {
 	},
 
 	loc_vars = function(self, info_queue, card)
+		local num, den = SMODS.get_probability_vars(
+			card,
+			card.ability.extra.numerator,
+			card.ability.extra.denominator,
+			"ultrafusion_superstition"
+		)
+
 		return {
 			vars = {
-				G.GAME and G.GAME.probabilities and G.GAME.probabilities.normal or 1
+				num,
+				den
 			}
 		}
 	end,
@@ -40,20 +55,37 @@ SMODS.Joker {
 
 			if qualifies then
 				local guaranteed = has_8 and is_straight
-				local odds = (G.GAME and G.GAME.probabilities and G.GAME.probabilities.normal or 1) / 2
-				local success = guaranteed or pseudorandom('ultrafusion_superstition') < odds
+				local success = guaranteed or SMODS.pseudorandom_probability(
+					card,
+					"ultrafusion_superstition",
+					card.ability.extra.numerator,
+					card.ability.extra.denominator,
+					"ultrafusion_superstition"
+				)
 
 				if success then
 					G.E_MANAGER:add_event(Event({
 						func = function()
 							if #G.consumeables.cards + G.GAME.consumeable_buffer < G.consumeables.config.card_limit then
 								G.GAME.consumeable_buffer = G.GAME.consumeable_buffer + 1
-								local tarot = create_card('Tarot', G.consumeables, nil, nil, nil, nil, nil, 'ultrafusion_superstition')
+
+								local tarot = create_card(
+									"Tarot",
+									G.consumeables,
+									nil,
+									nil,
+									nil,
+									nil,
+									nil,
+									"ultrafusion_superstition"
+								)
+
 								tarot:add_to_deck()
 								G.consumeables:emplace(tarot)
 								G.GAME.consumeable_buffer = 0
-								card_eval_status_text(card, 'extra', nil, nil, nil, {
-									message = localize('k_plus_tarot'),
+
+								card_eval_status_text(card, "extra", nil, nil, nil, {
+									message = localize("k_plus_tarot"),
 									colour = G.C.PURPLE
 								})
 							end

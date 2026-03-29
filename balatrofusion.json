@@ -10,5 +10,5 @@
 	"badge_colour": "505050",
 	"badge_text_colour": "ffffff",
 	"version": "0.0.1a",
-    "dependencies": ["Steamodded (>=1.0.0~BETA-0614a)", "FusionJokers"]
+    "dependencies": ["Steamodded (>=1.0.0~BETA-0614a)", "FusionJokers", "Amulet"]
 }

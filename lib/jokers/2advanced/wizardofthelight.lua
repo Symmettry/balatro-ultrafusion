@@ -1,7 +1,7 @@
 SMODS.Joker {
     key = "wizard_of_the_light",
     
-    rarity = "advfusion",
+    rarity = "ultrafusion_advfusion",
     blueprint_compat = true,
 
     config = {

@@ -4,7 +4,7 @@ SMODS.Joker {
     -- atlas = "jokers_142x190",
     -- pos = { x = 2, y = 0 },
 
-    rarity = "advfusion",
+    rarity = "ultrafusion_advfusion",
     blueprint_compat = false,
     eternal_compat = false,
 
@@ -81,7 +81,7 @@ FusionJokers.fusions:register_fusion{
     jokers = {
         { name = "j_fuse_camping_trip" },
         { name = "j_ultrafusion_gym_membership" },
-        { name = "j_mr_bones" },
+        { name = "j_ultrafusion_memorial" },
     },
     result_joker = "j_ultrafusion_survivalist",
     cost = 20,

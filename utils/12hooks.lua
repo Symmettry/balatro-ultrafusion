@@ -61,6 +61,7 @@ function UF.U.install_hooks()
         return false
     end
 
+    -- i got lazy with the UF.U stuff please bear no mind
     local card_set_cost_ref = Card.set_cost
     function Card:set_cost()
         card_set_cost_ref(self)

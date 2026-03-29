@@ -4,13 +4,13 @@ SMODS.Joker {
     -- atlas = "jokers_142x190",
     -- pos = { x = 7, y = 0 },
 
-    rarity = "advfusion",
+    rarity = "ultrafusion_advfusion",
     blueprint_compat = true,
 
     config = {
         extra = {
-            chips = 222,      -- per 2
-            flat_chips = 31,  -- always applied
+            chips = 222,
+            flat_chips = 31,
             xchips_gain = 0.22
         }
     },
@@ -32,8 +32,8 @@ SMODS.Joker {
 
         return {
             vars = {
-                card.ability.extra.chips,       -- #1 (per 2)
-                card.ability.extra.flat_chips,  -- #2 (flat)
+                card.ability.extra.chips,       -- #1
+                card.ability.extra.flat_chips,  -- #2
                 card.ability.extra.xchips_gain, -- #3
                 1 + (skips * card.ability.extra.xchips_gain) -- #4
             }
@@ -41,7 +41,6 @@ SMODS.Joker {
     end,
 
     calculate = function(self, card, context)
-        -- per 2 scoring
         if context.individual and context.cardarea == G.play and context.other_card and not context.blueprint then
             if context.other_card:get_id() == 2 then
                 return {
@@ -50,7 +49,6 @@ SMODS.Joker {
             end
         end
 
-        -- main scoring (flat + xchips)
         if context.joker_main then
             local skips = (G.GAME and G.GAME.skips) or 0
 

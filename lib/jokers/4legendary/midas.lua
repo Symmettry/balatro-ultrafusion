@@ -1,7 +1,7 @@
 SMODS.Joker {
 	key = "midas_the_invisible_hand_of_god",
 
-	rarity = "legfusion",
+	rarity = "ultrafusion_legfusion",
 	blueprint_compat = true,
 	perishable_compat = true,
 	eternal_compat = true,
@@ -81,10 +81,8 @@ SMODS.Joker {
 
             G.E_MANAGER:add_event(Event({
                 func = function()
-                    -- always reset money to exactly $0
                     ease_dollars(-current_money)
 
-                    -- adjust sell value ONLY (signed)
                     if current_money ~= 0 then
                         card.ability.extra_value = (card.ability.extra_value or 0) + (current_money * 3)
                         card:set_cost()

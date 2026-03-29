@@ -1,17 +1,24 @@
 SMODS.Joker {
 	key = "demonic_ritual",
 
-	rarity = "advfusion",
+	rarity = "ultrafusion_advfusion",
 	blueprint_compat = true,
 	cost = 14,
+
+	config = {
+		extra = {
+			numerator = 1,
+			denominator = 2
+		}
+	},
 
 	loc_txt = {
 		name = "Demonic Ritual",
 		text = {
 			"If played hand contains exactly {C:attention}one 8{},",
-			"{C:green}#1# in 2{} chance to create a {C:tarot}Tarot{} card",
+			"{C:green}#1# in #2#{} chance to create a {C:tarot}Tarot{} card",
 			"If played hand contains exactly {C:attention}one 6{},",
-			"{C:green}#1# in 2{} chance to create a {C:spectral}Spectral{} card",
+			"{C:green}#1# in #2#{} chance to create a {C:spectral}Spectral{} card",
 			"If played hand is a {C:attention}Straight{} containing",
 			"a {C:attention}6{} and an {C:attention}8{}, additionally create",
 			"a {C:dark_edition}Negative{} {C:spectral}Immolate{}",
@@ -20,9 +27,17 @@ SMODS.Joker {
 	},
 
 	loc_vars = function(self, info_queue, card)
+		local num, den = SMODS.get_probability_vars(
+			card,
+			card.ability.extra.numerator,
+			card.ability.extra.denominator,
+			"ultrafusion_demonic_ritual"
+		)
+
 		return {
 			vars = {
-				G.GAME and G.GAME.probabilities and G.GAME.probabilities.normal or 1
+				num,
+				den
 			}
 		}
 	end,
@@ -40,31 +55,36 @@ SMODS.Joker {
 
 			local is_straight = context.scoring_name == "Straight"
 			local straight_6_8 = is_straight and sixes >= 1 and eights >= 1
-			local odds = (G.GAME and G.GAME.probabilities and G.GAME.probabilities.normal or 1) / 2
 
-			if eights == 1 and pseudorandom('ultrafusion_demonic_ritual_tarot') < odds then
+			if eights == 1 and SMODS.pseudorandom_probability(
+				card,
+				"ultrafusion_demonic_ritual_tarot",
+				card.ability.extra.numerator,
+				card.ability.extra.denominator,
+				"ultrafusion_demonic_ritual_tarot"
+			) then
 				G.E_MANAGER:add_event(Event({
 					func = function()
 						if #G.consumeables.cards + G.GAME.consumeable_buffer < G.consumeables.config.card_limit then
 							G.GAME.consumeable_buffer = G.GAME.consumeable_buffer + 1
 
 							local tarot = create_card(
-								'Tarot',
+								"Tarot",
 								G.consumeables,
 								nil,
 								nil,
 								nil,
 								nil,
 								nil,
-								'ultrafusion_demonic_ritual_tarot'
+								"ultrafusion_demonic_ritual_tarot"
 							)
 
 							tarot:add_to_deck()
 							G.consumeables:emplace(tarot)
 							G.GAME.consumeable_buffer = 0
 
-							card_eval_status_text(card, 'extra', nil, nil, nil, {
-								message = localize('k_plus_tarot'),
+							card_eval_status_text(card, "extra", nil, nil, nil, {
+								message = localize("k_plus_tarot"),
 								colour = G.C.PURPLE
 							})
 						end
@@ -73,29 +93,35 @@ SMODS.Joker {
 				}))
 			end
 
-			if sixes == 1 and pseudorandom('ultrafusion_demonic_ritual_spectral') < odds then
+			if sixes == 1 and SMODS.pseudorandom_probability(
+				card,
+				"ultrafusion_demonic_ritual_spectral",
+				card.ability.extra.numerator,
+				card.ability.extra.denominator,
+				"ultrafusion_demonic_ritual_spectral"
+			) then
 				G.E_MANAGER:add_event(Event({
 					func = function()
 						if #G.consumeables.cards + G.GAME.consumeable_buffer < G.consumeables.config.card_limit then
 							G.GAME.consumeable_buffer = G.GAME.consumeable_buffer + 1
 
 							local spectral = create_card(
-								'Spectral',
+								"Spectral",
 								G.consumeables,
 								nil,
 								nil,
 								nil,
 								nil,
 								nil,
-								'ultrafusion_demonic_ritual_spectral'
+								"ultrafusion_demonic_ritual_spectral"
 							)
 
 							spectral:add_to_deck()
 							G.consumeables:emplace(spectral)
 							G.GAME.consumeable_buffer = 0
 
-							card_eval_status_text(card, 'extra', nil, nil, nil, {
-								message = localize('k_plus_spectral'),
+							card_eval_status_text(card, "extra", nil, nil, nil, {
+								message = localize("k_plus_spectral"),
 								colour = G.C.SECONDARY_SET.Spectral
 							})
 						end
@@ -107,31 +133,33 @@ SMODS.Joker {
 			if straight_6_8 then
 				G.E_MANAGER:add_event(Event({
 					func = function()
-                        G.GAME.consumeable_buffer = G.GAME.consumeable_buffer + 1
+						if #G.consumeables.cards + G.GAME.consumeable_buffer < G.consumeables.config.card_limit then
+							G.GAME.consumeable_buffer = G.GAME.consumeable_buffer + 1
 
-                        local immolate = create_card(
-                            'Spectral',
-                            G.consumeables,
-                            nil,
-                            nil,
-                            nil,
-                            nil,
-                            'c_immolate',
-                            'ultrafusion_demonic_ritual'
-                        )
+							local immolate = create_card(
+								"Spectral",
+								G.consumeables,
+								nil,
+								nil,
+								nil,
+								nil,
+								"c_immolate",
+								"ultrafusion_demonic_ritual"
+							)
 
-                        if immolate and immolate.set_edition then
-                            immolate:set_edition({ negative = true }, true, true)
-                        end
+							if immolate and immolate.set_edition then
+								immolate:set_edition({ negative = true }, true, true)
+							end
 
-                        immolate:add_to_deck()
-                        G.consumeables:emplace(immolate)
-                        G.GAME.consumeable_buffer = 0
+							immolate:add_to_deck()
+							G.consumeables:emplace(immolate)
+							G.GAME.consumeable_buffer = 0
 
-                        card_eval_status_text(card, 'extra', nil, nil, nil, {
-                            message = localize('k_plus_spectral'),
-                            colour = G.C.SECONDARY_SET.Spectral
-                        })
+							card_eval_status_text(card, "extra", nil, nil, nil, {
+								message = localize("k_plus_spectral"),
+								colour = G.C.SECONDARY_SET.Spectral
+							})
+						end
 						return true
 					end
 				}))

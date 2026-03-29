@@ -1,6 +1,6 @@
 SMODS.Joker {
     key = "he_who_stole_christmas",
-    rarity = "advfusion",
+    rarity = "ultrafusion_advfusion",
     blueprint_compat = true,
     cost = 14,
 
@@ -32,7 +32,6 @@ SMODS.Joker {
             local amount = card.ability.extra.sell_increase
             local affected = false
 
-            -- Jokers
             if G.jokers and G.jokers.cards then
                 for _, j in ipairs(G.jokers.cards) do
                     j.ability.extra_value = (j.ability.extra_value or 0) + amount
@@ -41,7 +40,6 @@ SMODS.Joker {
                 end
             end
 
-            -- Consumables
             if G.consumeables and G.consumeables.cards then
                 for _, c in ipairs(G.consumeables.cards) do
                     c.ability.extra_value = (c.ability.extra_value or 0) + amount

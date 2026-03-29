@@ -1,7 +1,7 @@
 SMODS.Joker {
     key = "the_grand_archmage",
 
-    rarity = "heroicfusion",
+    rarity = "ultrafusion_heroicfusion",
     blueprint_compat = true,
     perishable_compat = false,
 
@@ -19,7 +19,7 @@ SMODS.Joker {
     },
 
     loc_txt = {
-        name = "The Grand Archmage",
+        name = "{C:attention}The Grand Archmage{}",
         text = {
             "{C:inactive}\"Really? This is what you called me away from my studies for? Fine, I'll settle this quickly.\"{}",
             "{C:attention}Hearts{}, {C:attention}Diamonds{}, {C:attention}Spades{}, and {C:attention}Clubs{} are all considered to be the same suit",

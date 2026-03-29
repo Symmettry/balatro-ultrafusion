@@ -4,7 +4,7 @@ SMODS.Joker {
     -- atlas = "jokers_142x190",
     -- pos = { x = 8, y = 0 },
 
-    rarity = "heroicfusion",
+    rarity = "ultrafusion_heroicfusion",
     blueprint_compat = true,
 
     config = {
@@ -16,7 +16,7 @@ SMODS.Joker {
     },
 
     loc_txt = {
-        name = "BIG EVIL YORB!!!",
+        name = "{C:purple}BIG EVIL YORB!!!{}",
         text = {
             "{C:inactive}\"hey its me yorb\"{}",
             "Played {C:attention}2s{} give {C:blue}+#1#{} Chips when scored",
@@ -39,7 +39,6 @@ SMODS.Joker {
     end,
 
     calculate = function(self, card, context)
-        -- when a 2 scores → give chips AND scale xchips
         if context.individual and context.cardarea == G.play and context.other_card and not context.blueprint then
             if context.other_card:get_id() == 2 then
                 local skips = (G.GAME and G.GAME.skips) or 0
@@ -56,7 +55,6 @@ SMODS.Joker {
             end
         end
 
-        -- apply accumulated xchips
         if context.joker_main then
             return {
                 x_chips = card.ability.extra.xchips

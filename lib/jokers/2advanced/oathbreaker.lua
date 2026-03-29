@@ -1,7 +1,7 @@
 SMODS.Joker {
     key = "oath_breaker",
 
-    rarity = "advfusion",
+    rarity = "ultrafusion_advfusion",
     blueprint_compat = true,
 
     config = {

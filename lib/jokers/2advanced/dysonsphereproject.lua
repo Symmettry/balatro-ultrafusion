@@ -1,7 +1,7 @@
 SMODS.Joker {
 	key = "dyson_sphere_project",
 
-	rarity = "advfusion",
+	rarity = "ultrafusion_advfusion",
 	blueprint_compat = true,
 	perishable_compat = false,
 	cost = 16,

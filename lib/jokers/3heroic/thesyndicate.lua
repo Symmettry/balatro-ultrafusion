@@ -1,7 +1,7 @@
 SMODS.Joker {
     key = "the_syndicate",
     
-    rarity = "heroicfusion",
+    rarity = "ultrafusion_heroicfusion",
     blueprint_compat = false,
     perishable_compat = false,
 
@@ -17,7 +17,7 @@ SMODS.Joker {
     },
 
     loc_txt = {
-        name = "The Syndicate",
+        name = "{C:inactive}The Syndicate{}",
         text = {
             "{C:inactive}\"We will do what must be done. We are at your command.\"{}",
             "All cards are considered {C:attention}Kings{}",

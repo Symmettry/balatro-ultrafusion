@@ -1,7 +1,7 @@
 SMODS.Joker {
 	key = "the_final_frontier",
 
-	rarity = "heroicfusion",
+	rarity = "ultrafusion_heroicfusion",
 	blueprint_compat = true,
 	perishable_compat = false,
 	eternal_compat = false,
@@ -14,7 +14,7 @@ SMODS.Joker {
 	},
 
 	loc_txt = {
-		name = "The Final Frontier",
+		name = "{C:blue}The Final Frontier{}",
 		text = {
 			"{C:inactive}\"Only took an entire Dyson Sphere to power the damn thing...\"{}",
 			"Whenever a {C:attention}Poker Hand{} levels up, it gains {C:mult}+Mult{} equal to:",
@@ -62,7 +62,6 @@ SMODS.Joker {
 					local discards = current_round.discards_left or 0
 					local hands = current_round.hands_left or 0
 
-					-- These are the actual per-level values for the hand
 					local mult_per_level = handdata.l_mult or 0
 					local chips_per_level = handdata.l_chips or 0
 

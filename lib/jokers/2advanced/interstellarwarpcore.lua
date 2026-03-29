@@ -1,7 +1,7 @@
 SMODS.Joker {
 	key = "interstellar_warp_core",
 
-	rarity = "advfusion",
+	rarity = "ultrafusion_advfusion",
 	blueprint_compat = true,
 	perishable_compat = false,
 	cost = 16,

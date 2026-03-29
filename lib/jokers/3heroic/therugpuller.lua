@@ -1,7 +1,7 @@
 SMODS.Joker {
 	key = "the_rugpuller",
 
-	rarity = "heroicfusion",
+	rarity = "ultrafusion_heroicfusion",
 	blueprint_compat = true,
 	perishable_compat = true,
 	eternal_compat = true,
@@ -19,12 +19,13 @@ SMODS.Joker {
 			xmult_gain = 0.3,
 			dollars = 3,
 			dollars_gain = 3,
-			odds = 4
+			numerator = 1,
+			denominator = 4
 		}
 	},
 
 	loc_txt = {
-		name = "The Rugpuller",
+		name = "{C:attention}The Rugpuller{}",
 		text = {
 			"{C:inactive}\"YO BRO BUY MY NEW COIN $BAL I COPIED THE LINK TO YOUR CLIPBOARD\"{}",
 			"{C:attention}#1#{} free {C:attention}Rerolls{} per shop and go up to {C:red}-$#2#{} in debt",
@@ -54,6 +55,13 @@ SMODS.Joker {
 			end
 		end
 
+		local num, den = SMODS.get_probability_vars(
+			card,
+			card.ability.extra.numerator,
+			card.ability.extra.denominator,
+			"ultrafusion_the_rugpuller_zero"
+		)
+
 		return {
 			vars = {
 				card.ability.extra.free,
@@ -62,8 +70,8 @@ SMODS.Joker {
 				card.ability.extra.mult,
 				card.ability.extra.xmult,
 				card.ability.extra.dollars,
-				G.GAME and G.GAME.probabilities and G.GAME.probabilities.normal or 1,
-				card.ability.extra.odds,
+				num,
+				den,
 				count * card.ability.extra.chips,
 				count * card.ability.extra.mult,
 				1 + count * card.ability.extra.xmult,
@@ -97,9 +105,13 @@ SMODS.Joker {
 		end
 
 		if context.setting_blind and not context.blueprint then
-			local odds = (G.GAME and G.GAME.probabilities and G.GAME.probabilities.normal or 1) / card.ability.extra.odds
-
-			if pseudorandom('ultrafusion_the_rugpuller_zero') < odds then
+			if SMODS.pseudorandom_probability(
+				card,
+				"ultrafusion_the_rugpuller_zero",
+				card.ability.extra.numerator,
+				card.ability.extra.denominator,
+				"ultrafusion_the_rugpuller_zero"
+			) then
 				ease_dollars(-(G.GAME.dollars or 0))
 				return nil, true
 			end

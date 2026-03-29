@@ -1,7 +1,7 @@
 SMODS.Joker {
 	key = "the_overlord_of_greed",
 
-	rarity = "heroicfusion",
+	rarity = "ultrafusion_heroicfusion",
 	blueprint_compat = true,
 
 	config = {
@@ -14,7 +14,7 @@ SMODS.Joker {
 	},
 
 	loc_txt = {
-		name = "The Overlord of Greed",
+		name = "{C:attention}The Overlord of Greed{}",
 		text = {
 			"{C:blue}+#1# Hands{}, {C:mult}+#2# Mult{}, {X:mult,C:white}X#3#{} Mult",
 			"{C:attention}Jokers{} and {C:attention}Consumable{} cards gain",

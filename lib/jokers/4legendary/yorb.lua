@@ -4,7 +4,7 @@ SMODS.Joker {
     -- atlas = "jokers_142x190",
     -- pos = { x = 9, y = 0 },
 
-    rarity = "legfusion",
+    rarity = "ultrafusion_legfusion",
     blueprint_compat = false,
 
     loc_txt = {

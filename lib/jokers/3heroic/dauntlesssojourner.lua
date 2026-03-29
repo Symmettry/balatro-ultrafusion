@@ -4,7 +4,7 @@ SMODS.Joker {
     -- atlas = "jokers_142x190",
     -- pos = { x = 2, y = 0 },
 
-    rarity = "heroicfusion",
+    rarity = "ultrafusion_heroicfusion",
     blueprint_compat = false,
     eternal_compat = false,
 
@@ -19,7 +19,7 @@ SMODS.Joker {
     },
 
     loc_txt = {
-        name = "The Dauntless Sojourner",
+        name = "{C:red}The Dauntless Sojourner{}",
         text = {
             "{C:inactive}\"I'm excited to find out where we're heading next!\"{}",
             "All {C:attention}Boss Blinds{} are disabled",

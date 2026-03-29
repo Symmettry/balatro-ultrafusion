@@ -1,22 +1,24 @@
 SMODS.Joker {
 	key = "the_foretold_devil",
 
-	rarity = "heroicfusion",
+	rarity = "ultrafusion_heroicfusion",
 	blueprint_compat = true,
 	cost = 24,
 
 	config = {
 		extra = {
-			slots = 3
+			slots = 3,
+			numerator = 1,
+			denominator = 2
 		}
 	},
 
 	loc_txt = {
-		name = "The Foretold Devil",
+		name = "{C:red}The Foretold Devil{}",
 		text = {
 			"{C:inactive}\"I'm telling you, this is NOT the devil I spoke of! Why won't you LISTEN to me?!\"{}",
-			"{C:attention}+#2#{} Consumable Slots",
-			"Each of the following effects has a {C:green}#1# in 2{} chance to trigger:",
+			"{C:attention}+#3#{} Consumable Slots",
+			"Each of the following effects has a {C:green}#1# in #2#{} chance to trigger:",
 			"If played hand contains an {C:attention}8{}, create a {C:tarot}Tarot{} card",
 			"If played hand contains a {C:attention}6{}, create a {C:spectral}Spectral{} card",
 			"If played hand is a {C:attention}Straight{} containing a {C:attention}6{} or an {C:attention}8{}, create a",
@@ -28,9 +30,17 @@ SMODS.Joker {
 	},
 
 	loc_vars = function(self, info_queue, card)
+		local num, den = SMODS.get_probability_vars(
+			card,
+			card.ability.extra.numerator,
+			card.ability.extra.denominator,
+			"ultrafusion_foretold_devil"
+		)
+
 		return {
 			vars = {
-				G.GAME and G.GAME.probabilities and G.GAME.probabilities.normal or 1,
+				num,
+				den,
 				card.ability.extra.slots
 			}
 		}
@@ -62,11 +72,36 @@ SMODS.Joker {
 			local is_straight = context.scoring_name == "Straight"
 			local straight_has_6_or_8 = is_straight and (sixes > 0 or eights > 0)
 			local guaranteed = is_straight and sixes > 0 and eights > 0
-			local odds = (G.GAME and G.GAME.probabilities and G.GAME.probabilities.normal or 1) / 2
 
-			local make_tarot = eights > 0 and (guaranteed or pseudorandom('ultrafusion_foretold_devil_tarot') < odds)
-			local make_spectral = sixes > 0 and (guaranteed or pseudorandom('ultrafusion_foretold_devil_spectral') < odds)
-			local make_copy = straight_has_6_or_8 and (guaranteed or pseudorandom('ultrafusion_foretold_devil_copy') < odds)
+			local make_tarot = eights > 0 and (
+				guaranteed or SMODS.pseudorandom_probability(
+					card,
+					"ultrafusion_foretold_devil_tarot",
+					card.ability.extra.numerator,
+					card.ability.extra.denominator,
+					"ultrafusion_foretold_devil_tarot"
+				)
+			)
+
+			local make_spectral = sixes > 0 and (
+				guaranteed or SMODS.pseudorandom_probability(
+					card,
+					"ultrafusion_foretold_devil_spectral",
+					card.ability.extra.numerator,
+					card.ability.extra.denominator,
+					"ultrafusion_foretold_devil_spectral"
+				)
+			)
+
+			local make_copy = straight_has_6_or_8 and (
+				guaranteed or SMODS.pseudorandom_probability(
+					card,
+					"ultrafusion_foretold_devil_copy",
+					card.ability.extra.numerator,
+					card.ability.extra.denominator,
+					"ultrafusion_foretold_devil_copy"
+				)
+			)
 
 			if make_tarot then
 				G.E_MANAGER:add_event(Event({
@@ -75,22 +110,22 @@ SMODS.Joker {
 							G.GAME.consumeable_buffer = G.GAME.consumeable_buffer + 1
 
 							local tarot = create_card(
-								'Tarot',
+								"Tarot",
 								G.consumeables,
 								nil,
 								nil,
 								nil,
 								nil,
 								nil,
-								'ultrafusion_foretold_devil_tarot'
+								"ultrafusion_foretold_devil_tarot"
 							)
 
 							tarot:add_to_deck()
 							G.consumeables:emplace(tarot)
 							G.GAME.consumeable_buffer = 0
 
-							card_eval_status_text(card, 'extra', nil, nil, nil, {
-								message = localize('k_plus_tarot'),
+							card_eval_status_text(card, "extra", nil, nil, nil, {
+								message = localize("k_plus_tarot"),
 								colour = G.C.PURPLE
 							})
 						end
@@ -106,22 +141,22 @@ SMODS.Joker {
 							G.GAME.consumeable_buffer = G.GAME.consumeable_buffer + 1
 
 							local spectral = create_card(
-								'Spectral',
+								"Spectral",
 								G.consumeables,
 								nil,
 								nil,
 								nil,
 								nil,
 								nil,
-								'ultrafusion_foretold_devil_spectral'
+								"ultrafusion_foretold_devil_spectral"
 							)
 
 							spectral:add_to_deck()
 							G.consumeables:emplace(spectral)
 							G.GAME.consumeable_buffer = 0
 
-							card_eval_status_text(card, 'extra', nil, nil, nil, {
-								message = localize('k_plus_spectral'),
+							card_eval_status_text(card, "extra", nil, nil, nil, {
+								message = localize("k_plus_spectral"),
 								colour = G.C.SECONDARY_SET.Spectral
 							})
 						end
@@ -135,7 +170,9 @@ SMODS.Joker {
 					func = function()
 						local source = G.consumeables and G.consumeables.cards and G.consumeables.cards[1]
 
-						if source then
+						if source and #G.consumeables.cards + G.GAME.consumeable_buffer < G.consumeables.config.card_limit then
+							G.GAME.consumeable_buffer = G.GAME.consumeable_buffer + 1
+
 							local copied = copy_card(source, nil)
 							if copied then
 								if copied.set_edition then
@@ -145,11 +182,13 @@ SMODS.Joker {
 								copied:add_to_deck()
 								G.consumeables:emplace(copied)
 
-								card_eval_status_text(card, 'extra', nil, nil, nil, {
-									message = localize('k_copied_ex'),
+								card_eval_status_text(card, "extra", nil, nil, nil, {
+									message = localize("k_copied_ex"),
 									colour = G.C.DARK_EDITION
 								})
 							end
+
+							G.GAME.consumeable_buffer = 0
 						end
 						return true
 					end

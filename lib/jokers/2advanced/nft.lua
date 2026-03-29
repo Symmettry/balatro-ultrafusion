@@ -1,7 +1,7 @@
 SMODS.Joker {
 	key = "nft",
 
-	rarity = "advfusion",
+	rarity = "ultrafusion_advfusion",
 	blueprint_compat = true,
 	perishable_compat = true,
 	eternal_compat = true,

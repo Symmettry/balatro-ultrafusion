@@ -1,7 +1,7 @@
 SMODS.Joker {
     key = "golden_emperor",
 
-    rarity = "advfusion",
+    rarity = "ultrafusion_advfusion",
     blueprint_compat = true,
 
     config = {
