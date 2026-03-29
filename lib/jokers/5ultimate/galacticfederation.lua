@@ -1,7 +1,7 @@
 SMODS.Joker {
 	key = "the_galactic_federation",
 
-	rarity = "legfusion", -- swap to your blue-tier rarity key
+	rarity = "ultfusion",
 	blueprint_compat = true,
 	perishable_compat = true,
 	eternal_compat = true,
