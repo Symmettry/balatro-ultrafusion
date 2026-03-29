@@ -1,0 +1,739 @@
+{
+  [1] = {
+  ["result_joker"] = "j_fuse_diamond_bard",
+  ["jokers"] = {
+  [1] = {
+  ["name"] = "j_greedy_joker",
+  ["extra_stat"] = "<unsupported>",
+},
+  [2] = {
+  ["name"] = "j_rough_gem",
+  ["extra_stat"] = "<unsupported>",
+},
+},
+  ["cost"] = 12,
+},
+  [2] = {
+  ["result_joker"] = "j_fuse_heart_paladin",
+  ["jokers"] = {
+  [1] = {
+  ["name"] = "j_lusty_joker",
+  ["extra_stat"] = "<unsupported>",
+},
+  [2] = {
+  ["name"] = "j_bloodstone",
+  ["extra_stat"] = "<unsupported>",
+},
+},
+  ["cost"] = 12,
+},
+  [3] = {
+  ["result_joker"] = "j_fuse_spade_archer",
+  ["jokers"] = {
+  [1] = {
+  ["name"] = "j_wrathful_joker",
+  ["extra_stat"] = "<unsupported>",
+},
+  [2] = {
+  ["name"] = "j_arrowhead",
+  ["extra_stat"] = "<unsupported>",
+},
+},
+  ["cost"] = 12,
+},
+  [4] = {
+  ["result_joker"] = "j_fuse_club_wizard",
+  ["jokers"] = {
+  [1] = {
+  ["name"] = "j_gluttenous_joker",
+  ["extra_stat"] = "<unsupported>",
+},
+  [2] = {
+  ["name"] = "j_onyx_agate",
+  ["extra_stat"] = "<unsupported>",
+},
+},
+  ["cost"] = 12,
+},
+  [5] = {
+  ["result_joker"] = "j_fuse_big_bang",
+  ["jokers"] = {
+  [1] = {
+  ["name"] = "j_supernova",
+  ["extra_stat"] = "<unsupported>",
+},
+  [2] = {
+  ["name"] = "j_constellation",
+  ["extra_stat"] = "<unsupported>",
+},
+},
+  ["cost"] = 11,
+},
+  [6] = {
+  ["result_joker"] = "j_fuse_dynamic_duo",
+  ["jokers"] = {
+  [1] = {
+  ["name"] = "j_even_steven",
+  ["extra_stat"] = "<unsupported>",
+},
+  [2] = {
+  ["name"] = "j_odd_todd",
+  ["extra_stat"] = "<unsupported>",
+},
+},
+  ["cost"] = 8,
+},
+  [7] = {
+  ["result_joker"] = "j_fuse_collectible_chaos_card",
+  ["jokers"] = {
+  [1] = {
+  ["carry_stat"] = "mult",
+  ["name"] = "j_flash",
+  ["extra_stat"] = "<unsupported>",
+},
+  [2] = {
+  ["name"] = "j_chaos",
+  ["extra_stat"] = "<unsupported>",
+},
+},
+  ["cost"] = 9,
+},
+  [8] = {
+  ["result_joker"] = "j_fuse_flip_flop",
+  ["jokers"] = {
+  [1] = {
+  ["name"] = "j_juggler",
+  ["extra_stat"] = "<unsupported>",
+},
+  [2] = {
+  ["name"] = "j_drunkard",
+  ["extra_stat"] = "<unsupported>",
+},
+},
+  ["cost"] = 9,
+},
+  [9] = {
+  ["result_joker"] = "j_fuse_royal_decree",
+  ["jokers"] = {
+  [1] = {
+  ["name"] = "j_business",
+  ["extra_stat"] = "<unsupported>",
+},
+  [2] = {
+  ["name"] = "j_reserved_parking",
+  ["extra_stat"] = "<unsupported>",
+},
+},
+  ["cost"] = 10,
+},
+  [10] = {
+  ["result_joker"] = "j_fuse_dementia_joker",
+  ["jokers"] = {
+  [1] = {
+  ["name"] = "j_abstract",
+  ["extra_stat"] = "<unsupported>",
+},
+  [2] = {
+  ["name"] = "j_riff_raff",
+  ["extra_stat"] = "<unsupported>",
+},
+},
+  ["cost"] = 8,
+},
+  [11] = {
+  ["result_joker"] = "j_fuse_golden_egg",
+  ["jokers"] = {
+  [1] = {
+  ["carry_stat"] = "extra_value",
+  ["name"] = "j_egg",
+  ["extra_stat"] = "<unsupported>",
+},
+  [2] = {
+  ["name"] = "j_golden",
+  ["extra_stat"] = "<unsupported>",
+},
+},
+  ["cost"] = 10,
+},
+  [12] = {
+  ["result_joker"] = "j_fuse_flag_bearer",
+  ["jokers"] = {
+  [1] = {
+  ["name"] = "j_banner",
+  ["extra_stat"] = "<unsupported>",
+},
+  [2] = {
+  ["carry_stat"] = "mult",
+  ["name"] = "j_green_joker",
+  ["extra_stat"] = "<unsupported>",
+},
+},
+  ["cost"] = 9,
+},
+  [13] = {
+  ["result_joker"] = "j_fuse_uncanny_face",
+  ["jokers"] = {
+  [1] = {
+  ["name"] = "j_scary_face",
+  ["extra_stat"] = "<unsupported>",
+},
+  [2] = {
+  ["name"] = "j_smiley",
+  ["extra_stat"] = "<unsupported>",
+},
+},
+  ["cost"] = 8,
+},
+  [14] = {
+  ["result_joker"] = "j_fuse_commercial_driver",
+  ["jokers"] = {
+  [1] = {
+  ["name"] = "j_ride_the_bus",
+  ["extra_stat"] = "<unsupported>",
+},
+  [2] = {
+  ["name"] = "j_drivers_license",
+  ["extra_stat"] = "<unsupported>",
+},
+},
+  ["cost"] = 8,
+},
+  [15] = {
+  ["result_joker"] = "j_fuse_camping_trip",
+  ["jokers"] = {
+  [1] = {
+  ["name"] = "j_hiker",
+  ["extra_stat"] = "<unsupported>",
+},
+  [2] = {
+  ["name"] = "j_dusk",
+  ["extra_stat"] = "<unsupported>",
+},
+},
+  ["cost"] = 10,
+},
+  [16] = {
+  ["result_joker"] = "j_fuse_three_jimbos",
+  ["merged_stat"] = "mult",
+  ["jokers"] = {
+  [1] = {
+  ["name"] = "j_joker",
+  ["merge_stat"] = "mult",
+},
+  [2] = {
+  ["name"] = "j_joker",
+  ["merge_stat"] = "mult",
+},
+  [3] = {
+  ["name"] = "j_joker",
+  ["merge_stat"] = "mult",
+},
+},
+  ["cost"] = 2,
+},
+  [17] = {
+  ["result_joker"] = "j_ultrafusion_ancestry",
+  ["jokers"] = {
+  [1] = {
+  ["name"] = "j_certificate",
+},
+  [2] = {
+  ["name"] = "j_dna",
+},
+},
+  ["cost"] = 8,
+},
+  [18] = {
+  ["result_joker"] = "j_ultrafusion_back_alley",
+  ["jokers"] = {
+  [1] = {
+  ["name"] = "j_four_fingers",
+},
+  [2] = {
+  ["name"] = "j_shortcut",
+},
+},
+  ["cost"] = 7,
+},
+  [19] = {
+  ["result_joker"] = "j_ultrafusion_blind_spot",
+  ["jokers"] = {
+  [1] = {
+  ["name"] = "j_blackboard",
+},
+  [2] = {
+  ["name"] = "j_seeing_double",
+},
+},
+  ["cost"] = 8,
+},
+  [20] = {
+  ["result_joker"] = "j_ultrafusion_cunning",
+  ["jokers"] = {
+  [1] = {
+  ["name"] = "j_jolly",
+},
+  [2] = {
+  ["name"] = "j_sly",
+},
+},
+  ["cost"] = 4,
+},
+  [21] = {
+  ["result_joker"] = "j_ultrafusion_el_triunvirate",
+  ["jokers"] = {
+  [1] = {
+  ["name"] = "j_luchador",
+},
+  [2] = {
+  ["name"] = "j_matador",
+},
+  [3] = {
+  ["name"] = "j_chicot",
+},
+},
+  ["cost"] = 10,
+},
+  [22] = {
+  ["result_joker"] = "j_ultrafusion_forgotten_technology",
+  ["jokers"] = {
+  [1] = {
+  ["name"] = "j_marble",
+},
+  [2] = {
+  ["name"] = "j_hologram",
+},
+},
+  ["cost"] = 8,
+},
+  [23] = {
+  ["result_joker"] = "j_ultrafusion_gym_membership",
+  ["jokers"] = {
+  [1] = {
+  ["name"] = "j_acrobat",
+},
+  [2] = {
+  ["name"] = "j_loyalty_card",
+},
+  [3] = {
+  ["name"] = "j_card_sharp",
+},
+},
+  ["cost"] = 12,
+},
+  [24] = {
+  ["result_joker"] = "j_ultrafusion_insidious",
+  ["jokers"] = {
+  [1] = {
+  ["name"] = "j_zany",
+},
+  [2] = {
+  ["name"] = "j_wily",
+},
+},
+  ["cost"] = 4,
+},
+  [25] = {
+  ["result_joker"] = "j_ultrafusion_matriarchy",
+  ["jokers"] = {
+  [1] = {
+  ["name"] = "j_shoot_the_moon",
+},
+  [2] = {
+  ["name"] = "j_raised_fist",
+},
+},
+  ["cost"] = 6,
+},
+  [26] = {
+  ["result_joker"] = "j_ultrafusion_parkour_leggings",
+  ["jokers"] = {
+  [1] = {
+  ["name"] = "j_square",
+},
+  [2] = {
+  ["name"] = "j_spare_trousers",
+},
+},
+  ["cost"] = 7,
+},
+  [27] = {
+  ["result_joker"] = "j_ultrafusion_road_trip",
+  ["jokers"] = {
+  [1] = {
+  ["name"] = "j_campfire",
+},
+  [2] = {
+  ["name"] = "j_hit_the_road",
+},
+},
+  ["cost"] = 8,
+},
+  [28] = {
+  ["result_joker"] = "j_ultrafusion_self_reflection",
+  ["jokers"] = {
+  [1] = {
+  ["name"] = "j_pareidolia",
+},
+  [2] = {
+  ["name"] = "j_splash",
+},
+},
+  ["cost"] = 8,
+},
+  [29] = {
+  ["result_joker"] = "j_ultrafusion_shredded",
+  ["jokers"] = {
+  [1] = {
+  ["name"] = "j_half",
+},
+  [2] = {
+  ["name"] = "j_misprint",
+},
+},
+  ["cost"] = 5,
+},
+  [30] = {
+  ["result_joker"] = "j_ultrafusion_unhinged",
+  ["jokers"] = {
+  [1] = {
+  ["name"] = "j_mad",
+},
+  [2] = {
+  ["name"] = "j_clever",
+},
+},
+  ["cost"] = 4,
+},
+  [31] = {
+  ["result_joker"] = "j_ultrafusion_volatile",
+  ["jokers"] = {
+  [1] = {
+  ["name"] = "j_crazy",
+},
+  [2] = {
+  ["name"] = "j_devious",
+},
+},
+  ["cost"] = 4,
+},
+  [32] = {
+  ["result_joker"] = "j_ultrafusion_wry",
+  ["jokers"] = {
+  [1] = {
+  ["name"] = "j_droll",
+},
+  [2] = {
+  ["name"] = "j_crafty",
+},
+},
+  ["cost"] = 4,
+},
+  [33] = {
+  ["result_joker"] = "j_ultrafusion_lost_civilization",
+  ["jokers"] = {
+  [1] = {
+  ["name"] = "j_ultrafusion_ancestry",
+},
+  [2] = {
+  ["name"] = "j_ultrafusion_forgotten_technology",
+},
+},
+  ["cost"] = 12,
+},
+  [34] = {
+  ["result_joker"] = "j_ultrafusion_survivalist",
+  ["jokers"] = {
+  [1] = {
+  ["name"] = "j_fuse_camping_trip",
+},
+  [2] = {
+  ["name"] = "j_ultrafusion_gym_membership",
+},
+  [3] = {
+  ["name"] = "j_mr_bones",
+},
+},
+  ["cost"] = 20,
+},
+  [35] = {
+  ["result_joker"] = "j_ultrafusion_throne_of_lies",
+  ["jokers"] = {
+  [1] = {
+  ["name"] = "j_ultrafusion_matriarchy",
+},
+  [2] = {
+  ["name"] = "j_ultrafusion_blind_spot",
+},
+},
+  ["cost"] = 12,
+},
+  [36] = {
+  ["result_joker"] = "j_ultrafusion_world_tourist",
+  ["jokers"] = {
+  [1] = {
+  ["name"] = "j_ultrafusion_road_trip",
+},
+  [2] = {
+  ["name"] = "j_fuse_commercial_driver",
+},
+  [3] = {
+  ["name"] = "j_ultrafusion_el_triunvirate",
+},
+},
+  ["cost"] = 12,
+},
+  [37] = {
+  ["result_joker"] = "j_ultrafusion_the_dauntless_sojourner",
+  ["jokers"] = {
+  [1] = {
+  ["name"] = "j_ultrafusion_survivalist",
+},
+  [2] = {
+  ["name"] = "j_ultrafusion_world_tourist",
+},
+  [3] = {
+  ["name"] = "j_ultrafusion_lost_civilization",
+},
+},
+  ["cost"] = 20,
+},
+  ["add_fusion"] = "<unsupported>",
+  ["register_fusion"] = "<unsupported>",
+  ["ingredience"] = {
+  ["j_arrowhead"] = {
+  ["j_fuse_spade_archer"] = "<unsupported>",
+},
+  ["j_sly"] = {
+  ["j_ultrafusion_cunning"] = "<unsupported>",
+},
+  ["j_supernova"] = {
+  ["j_fuse_big_bang"] = "<unsupported>",
+},
+  ["j_droll"] = {
+  ["j_ultrafusion_wry"] = "<unsupported>",
+},
+  ["j_greedy_joker"] = {
+  ["j_fuse_diamond_bard"] = "<unsupported>",
+},
+  ["j_ultrafusion_blind_spot"] = {
+  ["j_ultrafusion_throne_of_lies"] = "<unsupported>",
+},
+  ["j_egg"] = {
+  ["j_fuse_golden_egg"] = "<unsupported>",
+},
+  ["j_four_fingers"] = {
+  ["j_ultrafusion_back_alley"] = "<unsupported>",
+},
+  ["j_golden"] = {
+  ["j_fuse_golden_egg"] = "<unsupported>",
+},
+  ["j_smiley"] = {
+  ["j_fuse_uncanny_face"] = "<unsupported>",
+},
+  ["j_drunkard"] = {
+  ["j_fuse_flip_flop"] = "<unsupported>",
+},
+  ["j_hit_the_road"] = {
+  ["j_ultrafusion_road_trip"] = "<unsupported>",
+},
+  ["j_ultrafusion_el_triunvirate"] = {
+  ["j_ultrafusion_world_tourist"] = "<unsupported>",
+},
+  ["j_card_sharp"] = {
+  ["j_ultrafusion_gym_membership"] = "<unsupported>",
+},
+  ["j_shoot_the_moon"] = {
+  ["j_ultrafusion_matriarchy"] = "<unsupported>",
+},
+  ["j_ultrafusion_matriarchy"] = {
+  ["j_ultrafusion_throne_of_lies"] = "<unsupported>",
+},
+  ["j_splash"] = {
+  ["j_ultrafusion_self_reflection"] = "<unsupported>",
+},
+  ["j_pareidolia"] = {
+  ["j_ultrafusion_self_reflection"] = "<unsupported>",
+},
+  ["j_green_joker"] = {
+  ["j_fuse_flag_bearer"] = "<unsupported>",
+},
+  ["j_shortcut"] = {
+  ["j_ultrafusion_back_alley"] = "<unsupported>",
+},
+  ["j_rough_gem"] = {
+  ["j_fuse_diamond_bard"] = "<unsupported>",
+},
+  ["j_banner"] = {
+  ["j_fuse_flag_bearer"] = "<unsupported>",
+},
+  ["j_devious"] = {
+  ["j_ultrafusion_volatile"] = "<unsupported>",
+},
+  ["j_scary_face"] = {
+  ["j_fuse_uncanny_face"] = "<unsupported>",
+},
+  ["j_ultrafusion_road_trip"] = {
+  ["j_ultrafusion_world_tourist"] = "<unsupported>",
+},
+  ["j_fuse_commercial_driver"] = {
+  ["j_ultrafusion_world_tourist"] = "<unsupported>",
+},
+  ["j_hologram"] = {
+  ["j_ultrafusion_forgotten_technology"] = "<unsupported>",
+},
+  ["j_ride_the_bus"] = {
+  ["j_fuse_commercial_driver"] = "<unsupported>",
+},
+  ["j_hiker"] = {
+  ["j_fuse_camping_trip"] = "<unsupported>",
+},
+  ["j_mad"] = {
+  ["j_ultrafusion_unhinged"] = "<unsupported>",
+},
+  ["j_square"] = {
+  ["j_ultrafusion_parkour_leggings"] = "<unsupported>",
+},
+  ["j_odd_todd"] = {
+  ["j_fuse_dynamic_duo"] = "<unsupported>",
+},
+  ["j_riff_raff"] = {
+  ["j_fuse_dementia_joker"] = "<unsupported>",
+},
+  ["j_spare_trousers"] = {
+  ["j_ultrafusion_parkour_leggings"] = "<unsupported>",
+},
+  ["j_reserved_parking"] = {
+  ["j_fuse_royal_decree"] = "<unsupported>",
+},
+  ["j_fuse_camping_trip"] = {
+  ["j_ultrafusion_survivalist"] = "<unsupported>",
+},
+  ["j_constellation"] = {
+  ["j_fuse_big_bang"] = "<unsupported>",
+},
+  ["j_flash"] = {
+  ["j_fuse_collectible_chaos_card"] = "<unsupported>",
+},
+  ["j_raised_fist"] = {
+  ["j_ultrafusion_matriarchy"] = "<unsupported>",
+},
+  ["j_joker"] = {
+  ["j_fuse_three_jimbos"] = "<unsupported>",
+},
+  ["j_onyx_agate"] = {
+  ["j_fuse_club_wizard"] = "<unsupported>",
+},
+  ["j_loyalty_card"] = {
+  ["j_ultrafusion_gym_membership"] = "<unsupported>",
+},
+  ["j_dna"] = {
+  ["j_ultrafusion_ancestry"] = "<unsupported>",
+},
+  ["j_zany"] = {
+  ["j_ultrafusion_insidious"] = "<unsupported>",
+},
+  ["j_acrobat"] = {
+  ["j_ultrafusion_gym_membership"] = "<unsupported>",
+},
+  ["j_wily"] = {
+  ["j_ultrafusion_insidious"] = "<unsupported>",
+},
+  ["j_even_steven"] = {
+  ["j_fuse_dynamic_duo"] = "<unsupported>",
+},
+  ["j_half"] = {
+  ["j_ultrafusion_shredded"] = "<unsupported>",
+},
+  ["j_business"] = {
+  ["j_fuse_royal_decree"] = "<unsupported>",
+},
+  ["j_crazy"] = {
+  ["j_ultrafusion_volatile"] = "<unsupported>",
+},
+  ["j_jolly"] = {
+  ["j_ultrafusion_cunning"] = "<unsupported>",
+},
+  ["j_crafty"] = {
+  ["j_ultrafusion_wry"] = "<unsupported>",
+},
+  ["j_bloodstone"] = {
+  ["j_fuse_heart_paladin"] = "<unsupported>",
+},
+  ["j_ultrafusion_ancestry"] = {
+  ["j_ultrafusion_lost_civilization"] = "<unsupported>",
+},
+  ["j_chaos"] = {
+  ["j_fuse_collectible_chaos_card"] = "<unsupported>",
+},
+  ["j_dusk"] = {
+  ["j_fuse_camping_trip"] = "<unsupported>",
+},
+  ["j_matador"] = {
+  ["j_ultrafusion_el_triunvirate"] = "<unsupported>",
+},
+  ["j_juggler"] = {
+  ["j_fuse_flip_flop"] = "<unsupported>",
+},
+  ["j_ultrafusion_survivalist"] = {
+  ["j_ultrafusion_the_dauntless_sojourner"] = "<unsupported>",
+},
+  ["j_lusty_joker"] = {
+  ["j_fuse_heart_paladin"] = "<unsupported>",
+},
+  ["j_ultrafusion_lost_civilization"] = {
+  ["j_ultrafusion_the_dauntless_sojourner"] = "<unsupported>",
+},
+  ["j_wrathful_joker"] = {
+  ["j_fuse_spade_archer"] = "<unsupported>",
+},
+  ["j_luchador"] = {
+  ["j_ultrafusion_el_triunvirate"] = "<unsupported>",
+},
+  ["j_mr_bones"] = {
+  ["j_ultrafusion_survivalist"] = "<unsupported>",
+},
+  ["j_chicot"] = {
+  ["j_ultrafusion_el_triunvirate"] = "<unsupported>",
+},
+  ["j_ultrafusion_forgotten_technology"] = {
+  ["j_ultrafusion_lost_civilization"] = "<unsupported>",
+},
+  ["j_drivers_license"] = {
+  ["j_fuse_commercial_driver"] = "<unsupported>",
+},
+  ["j_ultrafusion_gym_membership"] = {
+  ["j_ultrafusion_survivalist"] = "<unsupported>",
+},
+  ["j_blackboard"] = {
+  ["j_ultrafusion_blind_spot"] = "<unsupported>",
+},
+  ["j_misprint"] = {
+  ["j_ultrafusion_shredded"] = "<unsupported>",
+},
+  ["j_seeing_double"] = {
+  ["j_ultrafusion_blind_spot"] = "<unsupported>",
+},
+  ["j_ultrafusion_world_tourist"] = {
+  ["j_ultrafusion_the_dauntless_sojourner"] = "<unsupported>",
+},
+  ["j_abstract"] = {
+  ["j_fuse_dementia_joker"] = "<unsupported>",
+},
+  ["j_certificate"] = {
+  ["j_ultrafusion_ancestry"] = "<unsupported>",
+},
+  ["j_gluttenous_joker"] = {
+  ["j_fuse_club_wizard"] = "<unsupported>",
+},
+  ["j_marble"] = {
+  ["j_ultrafusion_forgotten_technology"] = "<unsupported>",
+},
+  ["j_clever"] = {
+  ["j_ultrafusion_unhinged"] = "<unsupported>",
+},
+  ["j_campfire"] = {
+  ["j_ultrafusion_road_trip"] = "<unsupported>",
+},
+},
+}
