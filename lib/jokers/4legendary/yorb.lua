@@ -8,7 +8,7 @@ SMODS.Joker {
     blueprint_compat = false,
 
     loc_txt = {
-        name = "Yorb, The Galactic Menace",
+        name = "{C:purple}Yorb, The Galactic Menace{}",
         text = {
             "{C:inactive}\"yo i'm on a friggin spaceship now??\"{}",
             "gives {C:blue}Chips{} (many of them)",

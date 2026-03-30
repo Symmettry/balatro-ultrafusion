@@ -102,6 +102,14 @@ function UF.U.install_hooks()
 
         return card_is_suit_ref(self, suit, bypass_debuff, flush_calc)
     end
+
+    local smods_showman_ref = SMODS.showman
+    function SMODS.showman(card_key)
+        if next(SMODS.find_card('j_ultrafusion_subwoofer')) or next(SMODS.find_card('j_ultrafusion_engineer')) or next(SMODS.find_card('j_ultrafusion_the_niflheim_experiment')) then
+            return true
+        end
+        return smods_showman_ref(card_key)
+    end
 end
 
 UF.U._card_get_id_ref = UF.U._card_get_id_ref or Card.get_id

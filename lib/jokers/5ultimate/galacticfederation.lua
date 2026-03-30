@@ -23,7 +23,7 @@ SMODS.Joker {
     },
 
 	loc_txt = {
-		name = "The Galactic Federation",
+		name = "{C:red,s:1.5}The Galactic Federation{}",
 		text = {
 			"{C:inactive}\"Our final stand against the witch.\"{}",
 			"{C:blue}+#1#{} Hands, {C:attention}No Debt Limit{}, and {C:attention}#2#{} free {C:attention}Rerolls{} per shop",
@@ -171,5 +171,5 @@ FusionJokers.fusions:register_fusion{
 		{ name = "j_ultrafusion_arcturus_high_sovereign_of_mana" },
 	},
 	result_joker = "j_ultrafusion_the_galactic_federation",
-	cost = 100000,
+	cost = 9999999,
 }

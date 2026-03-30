@@ -18,7 +18,10 @@ digraph FusionTree {
         "j_baseball" [label="Baseball Card", fillcolor="#f0f0f0"];
         "j_blackboard" [label="Blackboard", fillcolor="#f0f0f0"];
         "j_bloodstone" [label="Bloodstone", fillcolor="#f0f0f0"];
+        "j_blue_joker" [label="Blue Joker", fillcolor="#f0f0f0"];
+        "j_blueprint" [label="Blueprint", fillcolor="#f0f0f0"];
         "j_bootstraps" [label="Bootstraps", fillcolor="#f0f0f0"];
+        "j_brainstorm" [label="Brainstorm", fillcolor="#f0f0f0"];
         "j_bull" [label="Bull", fillcolor="#f0f0f0"];
         "j_burglar" [label="Burglar", fillcolor="#f0f0f0"];
         "j_burnt" [label="Burnt Joker", fillcolor="#f0f0f0"];
@@ -28,6 +31,7 @@ digraph FusionTree {
         "j_card_sharp" [label="Card Sharp", fillcolor="#f0f0f0"];
         "j_cartomancer" [label="Cartomancer", fillcolor="#f0f0f0"];
         "j_castle" [label="Castle", fillcolor="#f0f0f0"];
+        "j_cavendish" [label="Cavendish", fillcolor="#f0f0f0"];
         "j_ceremonial" [label="Ceremonial Dagger", fillcolor="#f0f0f0"];
         "j_certificate" [label="Certificate", fillcolor="#f0f0f0"];
         "j_chaos" [label="Chaos the Clown", fillcolor="#f0f0f0"];
@@ -40,6 +44,7 @@ digraph FusionTree {
         "j_credit_card" [label="Credit Card", fillcolor="#f0f0f0"];
         "j_delayed_grat" [label="Delayed Gratification", fillcolor="#f0f0f0"];
         "j_devious" [label="Devious Joker", fillcolor="#f0f0f0"];
+        "j_diet_cola" [label="Diet Cola", fillcolor="#f0f0f0"];
         "j_dna" [label="DNA", fillcolor="#f0f0f0"];
         "j_drivers_license" [label="Driver's License", fillcolor="#f0f0f0"];
         "j_droll" [label="Droll Joker", fillcolor="#f0f0f0"];
@@ -47,6 +52,7 @@ digraph FusionTree {
         "j_duo" [label="The Duo", fillcolor="#f0f0f0"];
         "j_dusk" [label="Dusk", fillcolor="#f0f0f0"];
         "j_egg" [label="Egg", fillcolor="#f0f0f0"];
+        "j_erosion" [label="Erosion", fillcolor="#f0f0f0"];
         "j_even_steven" [label="Even Steven", fillcolor="#f0f0f0"];
         "j_faceless" [label="Faceless Joker", fillcolor="#f0f0f0"];
         "j_family" [label="The Family", fillcolor="#f0f0f0"];
@@ -68,7 +74,9 @@ digraph FusionTree {
         "j_hiker" [label="Hiker", fillcolor="#f0f0f0"];
         "j_hit_the_road" [label="Hit the Road", fillcolor="#f0f0f0"];
         "j_hologram" [label="Hologram", fillcolor="#f0f0f0"];
+        "j_ice_cream" [label="Ice Cream", fillcolor="#f0f0f0"];
         "j_idol" [label="The Idol", fillcolor="#f0f0f0"];
+        "j_invisible" [label="Invisible Joker", fillcolor="#f0f0f0"];
         "j_joker" [label="Joker", fillcolor="#f0f0f0"];
         "j_jolly" [label="Jolly Joker", fillcolor="#f0f0f0"];
         "j_juggler" [label="Juggler", fillcolor="#f0f0f0"];
@@ -94,12 +102,14 @@ digraph FusionTree {
         "j_pareidolia" [label="Pareidolia", fillcolor="#f0f0f0"];
         "j_perkeo" [label="Perkeo", fillcolor="#f0f0f0"];
         "j_photograph" [label="Photograph", fillcolor="#f0f0f0"];
+        "j_popcorn" [label="Popcorn", fillcolor="#f0f0f0"];
         "j_raised_fist" [label="Raised Fist", fillcolor="#f0f0f0"];
         "j_ramen" [label="Ramen", fillcolor="#f0f0f0"];
         "j_red_card" [label="Red Card", fillcolor="#f0f0f0"];
         "j_reserved_parking" [label="Reserved Parking", fillcolor="#f0f0f0"];
         "j_ride_the_bus" [label="Ride the Bus", fillcolor="#f0f0f0"];
         "j_riff_raff" [label="Riff-Raff", fillcolor="#f0f0f0"];
+        "j_ring_master" [label="Showman", fillcolor="#f0f0f0"];
         "j_rocket" [label="Rocket", fillcolor="#f0f0f0"];
         "j_rough_gem" [label="Rough Gem", fillcolor="#f0f0f0"];
         "j_satellite" [label="Satellite", fillcolor="#f0f0f0"];
@@ -120,6 +130,7 @@ digraph FusionTree {
         "j_splash" [label="Splash", fillcolor="#f0f0f0"];
         "j_square" [label="Square Joker", fillcolor="#f0f0f0"];
         "j_steel_joker" [label="Steel Joker", fillcolor="#f0f0f0"];
+        "j_stencil" [label="Joker Stencil", fillcolor="#f0f0f0"];
         "j_stone" [label="Stone Joker", fillcolor="#f0f0f0"];
         "j_stuntman" [label="Stuntman", fillcolor="#f0f0f0"];
         "j_supernova" [label="Supernova", fillcolor="#f0f0f0"];
@@ -133,8 +144,11 @@ digraph FusionTree {
         "j_tribe" [label="The Tribe", fillcolor="#f0f0f0"];
         "j_triboulet" [label="Triboulet", fillcolor="#f0f0f0"];
         "j_trio" [label="The Trio", fillcolor="#f0f0f0"];
+        "j_troubadour" [label="Troubadour", fillcolor="#f0f0f0"];
+        "j_turtle_bean" [label="Turtle Bean", fillcolor="#f0f0f0"];
         "j_vagabond" [label="Vagabond", fillcolor="#f0f0f0"];
         "j_vampire" [label="Vampire", fillcolor="#f0f0f0"];
+        "j_walkie_talkie" [label="Walkie Talkie", fillcolor="#f0f0f0"];
         "j_wee" [label="Wee Joker", fillcolor="#f0f0f0"];
         "j_wily" [label="Wily Joker", fillcolor="#f0f0f0"];
         "j_wrathful_joker" [label="Wrathful Joker", fillcolor="#f0f0f0"];
@@ -164,6 +178,8 @@ digraph FusionTree {
         "j_fuse_three_jimbos" [label="Three Fucking Jimbos", fillcolor="#feffb5"];
         "j_fuse_uncanny_face" [label="Uncanny Face", fillcolor="#feffb5"];
         "j_ultrafusion_ancestry" [label="Ancestry", fillcolor="#feffb5"];
+        "j_ultrafusion_antimatter_dimension" [label="Antimatter Dimension", fillcolor="#feffb5"];
+        "j_ultrafusion_architecture" [label="Architecture", fillcolor="#feffb5"];
         "j_ultrafusion_back_alley" [label="Back Alley", fillcolor="#feffb5"];
         "j_ultrafusion_blind_spot" [label="Blind Spot", fillcolor="#feffb5"];
         "j_ultrafusion_cloud_banking" [label="Cloud Banking", fillcolor="#feffb5"];
@@ -181,6 +197,7 @@ digraph FusionTree {
         "j_ultrafusion_hand_sanitizer" [label="Hand Sanitizer", fillcolor="#feffb5"];
         "j_ultrafusion_hieroglyphics" [label="Hieroglyphics", fillcolor="#feffb5"];
         "j_ultrafusion_insidious" [label="Insidious Joker", fillcolor="#feffb5"];
+        "j_ultrafusion_keep_your_cool" [label="Keep Your Cool", fillcolor="#feffb5"];
         "j_ultrafusion_king_midas" [label="King Midas", fillcolor="#feffb5"];
         "j_ultrafusion_lil_yorb" [label="Lil' Yorb", fillcolor="#feffb5"];
         "j_ultrafusion_lucky_charm" [label="Lucky Charm", fillcolor="#feffb5"];
@@ -188,18 +205,22 @@ digraph FusionTree {
         "j_ultrafusion_matriarchy" [label="Matriarchy", fillcolor="#feffb5"];
         "j_ultrafusion_memorial" [label="Memorial", fillcolor="#feffb5"];
         "j_ultrafusion_moon_landing" [label="Moon Landing", fillcolor="#feffb5"];
+        "j_ultrafusion_munchies" [label="Munchies", fillcolor="#feffb5"];
+        "j_ultrafusion_pantry_space" [label="Pantry Space", fillcolor="#feffb5"];
         "j_ultrafusion_parkour_leggings" [label="Parkour Leggings", fillcolor="#feffb5"];
         "j_ultrafusion_renowned_poet" [label="Renowned Poet", fillcolor="#feffb5"];
         "j_ultrafusion_rigged_election" [label="Rigged Election", fillcolor="#feffb5"];
         "j_ultrafusion_road_trip" [label="Road Trip", fillcolor="#feffb5"];
         "j_ultrafusion_sage_prophet" [label="Sage Prophet", fillcolor="#feffb5"];
         "j_ultrafusion_santas_nice_list" [label="Santa's Nice List", fillcolor="#feffb5"];
+        "j_ultrafusion_scientific_method" [label="Scientific Method", fillcolor="#feffb5"];
         "j_ultrafusion_self_reflection" [label="Self-Reflection", fillcolor="#feffb5"];
         "j_ultrafusion_shattered_mirror" [label="Shattered Mirror", fillcolor="#feffb5"];
         "j_ultrafusion_space_fuel" [label="Space Fuel", fillcolor="#feffb5"];
         "j_ultrafusion_space_station" [label="Space Station", fillcolor="#feffb5"];
         "j_ultrafusion_stolen_artifact" [label="Stolen Artifact", fillcolor="#feffb5"];
         "j_ultrafusion_sturdy" [label="Sturdy Joker", fillcolor="#feffb5"];
+        "j_ultrafusion_subwoofer" [label="Subwoofer", fillcolor="#feffb5"];
         "j_ultrafusion_summoner" [label="Summoner", fillcolor="#feffb5"];
         "j_ultrafusion_superstition" [label="Superstition", fillcolor="#feffb5"];
         "j_ultrafusion_unhinged" [label="Unhinged Joker", fillcolor="#feffb5"];
@@ -215,10 +236,12 @@ digraph FusionTree {
 
         "j_ultrafusion_adolescent_witch" [label="Adolescent Witch", fillcolor="#e3f7e4"];
         "j_ultrafusion_black_market" [label="Black Market", fillcolor="#e3f7e4"];
+        "j_ultrafusion_box_of_frost" [label="Box of Frost", fillcolor="#e3f7e4"];
         "j_ultrafusion_crypto_wallet" [label="Crypto Wallet", fillcolor="#e3f7e4"];
         "j_ultrafusion_demonic_ritual" [label="Demonic Ritual", fillcolor="#e3f7e4"];
         "j_ultrafusion_divine_oracle" [label="Divine Oracle", fillcolor="#e3f7e4"];
         "j_ultrafusion_dyson_sphere_project" [label="Dyson Sphere Project", fillcolor="#e3f7e4"];
+        "j_ultrafusion_engineer" [label="Engineer", fillcolor="#e3f7e4"];
         "j_ultrafusion_evil" [label="Evil Joker", fillcolor="#e3f7e4"];
         "j_ultrafusion_golden_emperor" [label="Golden Emperor", fillcolor="#e3f7e4"];
         "j_ultrafusion_grand_auditorium" [label="Grand Auditorium", fillcolor="#e3f7e4"];
@@ -231,6 +254,7 @@ digraph FusionTree {
         "j_ultrafusion_magic_mirror" [label="Magic Mirror", fillcolor="#e3f7e4"];
         "j_ultrafusion_nft" [label="NFT", fillcolor="#e3f7e4"];
         "j_ultrafusion_oath_breaker" [label="Oath Breaker", fillcolor="#e3f7e4"];
+        "j_ultrafusion_pocket_dimension" [label="Pocket Dimension", fillcolor="#e3f7e4"];
         "j_ultrafusion_survivalist" [label="Survivalist", fillcolor="#e3f7e4"];
         "j_ultrafusion_throne_of_lies" [label="Throne of Lies", fillcolor="#e3f7e4"];
         "j_ultrafusion_wizard_of_the_dark" [label="Wizard of the Dark", fillcolor="#e3f7e4"];
@@ -249,6 +273,7 @@ digraph FusionTree {
         "j_ultrafusion_the_final_frontier" [label="The Final Frontier", fillcolor="#d9eef4"];
         "j_ultrafusion_the_foretold_devil" [label="The Foretold Devil", fillcolor="#d9eef4"];
         "j_ultrafusion_the_grand_archmage" [label="The Grand Archmage", fillcolor="#d9eef4"];
+        "j_ultrafusion_the_niflheim_experiment" [label="The Niflheim Experiment", fillcolor="#d9eef4"];
         "j_ultrafusion_the_overlord_of_greed" [label="The Overlord of Greed", fillcolor="#d9eef4"];
         "j_ultrafusion_the_rugpuller" [label="The Rugpuller", fillcolor="#d9eef4"];
         "j_ultrafusion_the_syndicate" [label="The Syndicate", fillcolor="#d9eef4"];
@@ -260,6 +285,7 @@ digraph FusionTree {
         style="rounded";
 
         "j_ultrafusion_arcturus_high_sovereign_of_mana" [label="Arcturus, High Sovereign of Mana", fillcolor="#eedcff"];
+        "j_ultrafusion_charybdis_the_progenitor_of_the_frost" [label="Charybdis, The Progenitor of the Frost", fillcolor="#eedcff"];
         "j_ultrafusion_midas_the_invisible_hand_of_god" [label="Midas, The Invisible Hand of God", fillcolor="#eedcff"];
         "j_ultrafusion_yorb_galactic_menace" [label="Yorb, The Galactic Menace", fillcolor="#eedcff"];
     }
@@ -310,6 +336,10 @@ digraph FusionTree {
     "j_fuse_uncanny_face" -> "j_ultrafusion_adolescent_witch";
     "j_certificate" -> "j_ultrafusion_ancestry";
     "j_dna" -> "j_ultrafusion_ancestry";
+    "j_invisible" -> "j_ultrafusion_antimatter_dimension";
+    "j_stencil" -> "j_ultrafusion_antimatter_dimension";
+    "j_blueprint" -> "j_ultrafusion_architecture";
+    "j_brainstorm" -> "j_ultrafusion_architecture";
     "j_ultrafusion_the_syndicate" -> "j_ultrafusion_arcturus_high_sovereign_of_mana";
     "j_ultrafusion_the_grand_archmage" -> "j_ultrafusion_arcturus_high_sovereign_of_mana";
     "j_four_fingers" -> "j_ultrafusion_back_alley";
@@ -325,6 +355,11 @@ digraph FusionTree {
     "j_ultrafusion_adolescent_witch" -> "j_ultrafusion_blood_witch";
     "j_ultrafusion_magic_mirror" -> "j_ultrafusion_blood_witch";
     "j_caino" -> "j_ultrafusion_blood_witch";
+    "j_ultrafusion_munchies" -> "j_ultrafusion_box_of_frost";
+    "j_ultrafusion_pantry_space" -> "j_ultrafusion_box_of_frost";
+    "j_ultrafusion_keep_your_cool" -> "j_ultrafusion_box_of_frost";
+    "j_ultrafusion_the_niflheim_experiment" -> "j_ultrafusion_charybdis_the_progenitor_of_the_frost";
+    "j_ultrafusion_the_foretold_devil" -> "j_ultrafusion_charybdis_the_progenitor_of_the_frost";
     "j_cloud_9" -> "j_ultrafusion_cloud_banking";
     "j_credit_card" -> "j_ultrafusion_cloud_banking";
     "j_red_card" -> "j_ultrafusion_collectible_baseball_card";
@@ -354,6 +389,9 @@ digraph FusionTree {
     "j_luchador" -> "j_ultrafusion_el_triunvirate";
     "j_matador" -> "j_ultrafusion_el_triunvirate";
     "j_chicot" -> "j_ultrafusion_el_triunvirate";
+    "j_ultrafusion_scientific_method" -> "j_ultrafusion_engineer";
+    "j_fuse_dynamic_duo" -> "j_ultrafusion_engineer";
+    "j_ultrafusion_subwoofer" -> "j_ultrafusion_engineer";
     "j_cartomancer" -> "j_ultrafusion_enlightened_seer";
     "j_hallucination" -> "j_ultrafusion_enlightened_seer";
     "j_idol" -> "j_ultrafusion_enthrallment";
@@ -387,6 +425,8 @@ digraph FusionTree {
     "j_fuse_flag_bearer" -> "j_ultrafusion_interstellar_warp_core";
     "j_ultrafusion_volatile" -> "j_ultrafusion_joker_whos_also_evil";
     "j_ultrafusion_wry" -> "j_ultrafusion_joker_whos_also_evil";
+    "j_cavendish" -> "j_ultrafusion_keep_your_cool";
+    "j_diet_cola" -> "j_ultrafusion_keep_your_cool";
     "j_midas_mask" -> "j_ultrafusion_king_midas";
     "j_ticket" -> "j_ultrafusion_king_midas";
     "j_ultrafusion_hieroglyphics" -> "j_ultrafusion_library_of_scrolls";
@@ -412,13 +452,19 @@ digraph FusionTree {
     "j_ultrafusion_the_overlord_of_greed" -> "j_ultrafusion_midas_the_invisible_hand_of_god";
     "j_rocket" -> "j_ultrafusion_moon_landing";
     "j_to_the_moon" -> "j_ultrafusion_moon_landing";
+    "j_ice_cream" -> "j_ultrafusion_munchies";
+    "j_popcorn" -> "j_ultrafusion_munchies";
     "j_ultrafusion_collectible_baseball_card" -> "j_ultrafusion_nft";
     "j_fuse_collectible_chaos_card" -> "j_ultrafusion_nft";
     "j_fuse_dementia_joker" -> "j_ultrafusion_nft";
     "j_ultrafusion_stolen_artifact" -> "j_ultrafusion_oath_breaker";
     "j_ultrafusion_daoism" -> "j_ultrafusion_oath_breaker";
+    "j_troubadour" -> "j_ultrafusion_pantry_space";
+    "j_turtle_bean" -> "j_ultrafusion_pantry_space";
     "j_square" -> "j_ultrafusion_parkour_leggings";
     "j_spare_trousers" -> "j_ultrafusion_parkour_leggings";
+    "j_ultrafusion_architecture" -> "j_ultrafusion_pocket_dimension";
+    "j_ultrafusion_antimatter_dimension" -> "j_ultrafusion_pocket_dimension";
     "j_castle" -> "j_ultrafusion_renowned_poet";
     "j_merry_andy" -> "j_ultrafusion_renowned_poet";
     "j_yorick" -> "j_ultrafusion_renowned_poet";
@@ -430,6 +476,8 @@ digraph FusionTree {
     "j_fortune_teller" -> "j_ultrafusion_sage_prophet";
     "j_todo_list" -> "j_ultrafusion_santas_nice_list";
     "j_gift" -> "j_ultrafusion_santas_nice_list";
+    "j_erosion" -> "j_ultrafusion_scientific_method";
+    "j_blue_joker" -> "j_ultrafusion_scientific_method";
     "j_pareidolia" -> "j_ultrafusion_self_reflection";
     "j_splash" -> "j_ultrafusion_self_reflection";
     "j_vampire" -> "j_ultrafusion_shattered_mirror";
@@ -443,6 +491,8 @@ digraph FusionTree {
     "j_mystic_summit" -> "j_ultrafusion_stolen_artifact";
     "j_stone" -> "j_ultrafusion_sturdy";
     "j_steel_joker" -> "j_ultrafusion_sturdy";
+    "j_ring_master" -> "j_ultrafusion_subwoofer";
+    "j_walkie_talkie" -> "j_ultrafusion_subwoofer";
     "j_trading" -> "j_ultrafusion_summoner";
     "j_sixth_sense" -> "j_ultrafusion_summoner";
     "j_seance" -> "j_ultrafusion_summoner";
@@ -465,6 +515,9 @@ digraph FusionTree {
     "j_ultrafusion_wizard_of_the_light" -> "j_ultrafusion_the_grand_archmage";
     "j_ultrafusion_wizard_of_the_dark" -> "j_ultrafusion_the_grand_archmage";
     "j_ultrafusion_library_of_scrolls" -> "j_ultrafusion_the_grand_archmage";
+    "j_ultrafusion_engineer" -> "j_ultrafusion_the_niflheim_experiment";
+    "j_ultrafusion_pocket_dimension" -> "j_ultrafusion_the_niflheim_experiment";
+    "j_ultrafusion_box_of_frost" -> "j_ultrafusion_the_niflheim_experiment";
     "j_ultrafusion_golden_emperor" -> "j_ultrafusion_the_overlord_of_greed";
     "j_ultrafusion_oath_breaker" -> "j_ultrafusion_the_overlord_of_greed";
     "j_ultrafusion_he_who_stole_christmas" -> "j_ultrafusion_the_overlord_of_greed";
@@ -509,7 +562,10 @@ digraph FusionTree {
         "j_baseball";
         "j_blackboard";
         "j_bloodstone";
+        "j_blue_joker";
+        "j_blueprint";
         "j_bootstraps";
+        "j_brainstorm";
         "j_bull";
         "j_burglar";
         "j_burnt";
@@ -519,6 +575,7 @@ digraph FusionTree {
         "j_card_sharp";
         "j_cartomancer";
         "j_castle";
+        "j_cavendish";
         "j_ceremonial";
         "j_certificate";
         "j_chaos";
@@ -531,6 +588,7 @@ digraph FusionTree {
         "j_credit_card";
         "j_delayed_grat";
         "j_devious";
+        "j_diet_cola";
         "j_dna";
         "j_drivers_license";
         "j_droll";
@@ -538,6 +596,7 @@ digraph FusionTree {
         "j_duo";
         "j_dusk";
         "j_egg";
+        "j_erosion";
         "j_even_steven";
         "j_faceless";
         "j_family";
@@ -559,7 +618,9 @@ digraph FusionTree {
         "j_hiker";
         "j_hit_the_road";
         "j_hologram";
+        "j_ice_cream";
         "j_idol";
+        "j_invisible";
         "j_joker";
         "j_jolly";
         "j_juggler";
@@ -585,12 +646,14 @@ digraph FusionTree {
         "j_pareidolia";
         "j_perkeo";
         "j_photograph";
+        "j_popcorn";
         "j_raised_fist";
         "j_ramen";
         "j_red_card";
         "j_reserved_parking";
         "j_ride_the_bus";
         "j_riff_raff";
+        "j_ring_master";
         "j_rocket";
         "j_rough_gem";
         "j_satellite";
@@ -611,6 +674,7 @@ digraph FusionTree {
         "j_splash";
         "j_square";
         "j_steel_joker";
+        "j_stencil";
         "j_stone";
         "j_stuntman";
         "j_supernova";
@@ -624,8 +688,11 @@ digraph FusionTree {
         "j_tribe";
         "j_triboulet";
         "j_trio";
+        "j_troubadour";
+        "j_turtle_bean";
         "j_vagabond";
         "j_vampire";
+        "j_walkie_talkie";
         "j_wee";
         "j_wily";
         "j_wrathful_joker";
@@ -651,6 +718,8 @@ digraph FusionTree {
         "j_fuse_three_jimbos";
         "j_fuse_uncanny_face";
         "j_ultrafusion_ancestry";
+        "j_ultrafusion_antimatter_dimension";
+        "j_ultrafusion_architecture";
         "j_ultrafusion_back_alley";
         "j_ultrafusion_blind_spot";
         "j_ultrafusion_cloud_banking";
@@ -668,6 +737,7 @@ digraph FusionTree {
         "j_ultrafusion_hand_sanitizer";
         "j_ultrafusion_hieroglyphics";
         "j_ultrafusion_insidious";
+        "j_ultrafusion_keep_your_cool";
         "j_ultrafusion_king_midas";
         "j_ultrafusion_lil_yorb";
         "j_ultrafusion_lucky_charm";
@@ -675,18 +745,22 @@ digraph FusionTree {
         "j_ultrafusion_matriarchy";
         "j_ultrafusion_memorial";
         "j_ultrafusion_moon_landing";
+        "j_ultrafusion_munchies";
+        "j_ultrafusion_pantry_space";
         "j_ultrafusion_parkour_leggings";
         "j_ultrafusion_renowned_poet";
         "j_ultrafusion_rigged_election";
         "j_ultrafusion_road_trip";
         "j_ultrafusion_sage_prophet";
         "j_ultrafusion_santas_nice_list";
+        "j_ultrafusion_scientific_method";
         "j_ultrafusion_self_reflection";
         "j_ultrafusion_shattered_mirror";
         "j_ultrafusion_space_fuel";
         "j_ultrafusion_space_station";
         "j_ultrafusion_stolen_artifact";
         "j_ultrafusion_sturdy";
+        "j_ultrafusion_subwoofer";
         "j_ultrafusion_summoner";
         "j_ultrafusion_superstition";
         "j_ultrafusion_unhinged";
@@ -698,10 +772,12 @@ digraph FusionTree {
     { rank=same;
         "j_ultrafusion_adolescent_witch";
         "j_ultrafusion_black_market";
+        "j_ultrafusion_box_of_frost";
         "j_ultrafusion_crypto_wallet";
         "j_ultrafusion_demonic_ritual";
         "j_ultrafusion_divine_oracle";
         "j_ultrafusion_dyson_sphere_project";
+        "j_ultrafusion_engineer";
         "j_ultrafusion_evil";
         "j_ultrafusion_golden_emperor";
         "j_ultrafusion_grand_auditorium";
@@ -714,6 +790,7 @@ digraph FusionTree {
         "j_ultrafusion_magic_mirror";
         "j_ultrafusion_nft";
         "j_ultrafusion_oath_breaker";
+        "j_ultrafusion_pocket_dimension";
         "j_ultrafusion_survivalist";
         "j_ultrafusion_throne_of_lies";
         "j_ultrafusion_wizard_of_the_dark";
@@ -728,6 +805,7 @@ digraph FusionTree {
         "j_ultrafusion_the_final_frontier";
         "j_ultrafusion_the_foretold_devil";
         "j_ultrafusion_the_grand_archmage";
+        "j_ultrafusion_the_niflheim_experiment";
         "j_ultrafusion_the_overlord_of_greed";
         "j_ultrafusion_the_rugpuller";
         "j_ultrafusion_the_syndicate";
@@ -735,6 +813,7 @@ digraph FusionTree {
 
     { rank=same;
         "j_ultrafusion_arcturus_high_sovereign_of_mana";
+        "j_ultrafusion_charybdis_the_progenitor_of_the_frost";
         "j_ultrafusion_midas_the_invisible_hand_of_god";
         "j_ultrafusion_yorb_galactic_menace";
     }

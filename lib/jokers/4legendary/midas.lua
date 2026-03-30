@@ -22,7 +22,7 @@ SMODS.Joker {
 	},
 
 	loc_txt = {
-		name = "Midas, The Invisible Hand of God",
+		name = "{C:attention}Midas, The Invisible Hand of God{}",
 		text = {
 			"{C:inactive}\"That scam artist works for me now.\"{}",
 			"{C:red}-$#1#{} Debt Limit, {C:blue}+#2#{} Hands,",
@@ -150,5 +150,5 @@ FusionJokers.fusions:register_fusion{
 		{ name = "j_ultrafusion_the_overlord_of_greed" },
 	},
 	result_joker = "j_ultrafusion_midas_the_invisible_hand_of_god",
-	cost = 32,
+	cost = 1234,
 }

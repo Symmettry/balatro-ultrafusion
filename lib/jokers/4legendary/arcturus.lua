@@ -23,7 +23,7 @@ SMODS.Joker {
     },
     
     loc_txt = {
-        name = "Arcturus, High Sovereign of Mana",
+        name = "{C:blue}Arcturus, High Sovereign of Mana{}",
         text = {
             "{C:inactive}\"Finally, the library is sorted. At last, everything in its place.\"{}",
             "This Joker triggers its {C:blue}+Chips{}, {C:mult}+Mult{}, and {X:mult,C:white}XMult{} before Cards score.",
@@ -95,5 +95,5 @@ FusionJokers.fusions:register_fusion{
         { name = "j_ultrafusion_the_grand_archmage" },
     },
     result_joker = "j_ultrafusion_arcturus_high_sovereign_of_mana",
-    cost = 50,
+    cost = 1000,
 }

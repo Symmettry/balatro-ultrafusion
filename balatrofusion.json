@@ -6,7 +6,7 @@
 	"description": "An addon to the Balatro Fusion mod that extends the features a LOT more",
 	"prefix": "ultrafusion",
 	"main_file": "main.lua",
-	"priority": 0,
+	"priority": 100,
 	"badge_colour": "505050",
 	"badge_text_colour": "ffffff",
 	"version": "0.0.1a",
