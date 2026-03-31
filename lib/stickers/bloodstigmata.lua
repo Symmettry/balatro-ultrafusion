@@ -43,8 +43,12 @@ SMODS.Sticker {
                 UF.U.add_perma_dollars(card, amount)
             end
 
-            print(card.ability.ultrafusion_blood_stigmata.aurora_data)
-            print(devotion)
+            local aurora = card.ability.ultrafusion_blood_stigmata.aurora_data
+            print(aurora.blood, aurora.min_blood + devotion)
+            if aurora.blood > aurora.min_blood + devotion then
+                aurora.blood = aurora.blood - devotion
+                card.ability.ultrafusion_blood_stigmata.devotion = devotion + 1
+            end
 
             return {
                 message = localize('k_upgrade_ex')

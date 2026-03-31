@@ -38,8 +38,6 @@ SMODS.Joker {
             
             "Destroyed {C:attention}Face Cards{} increase {C:red}Blood{} and {C:red}Maximum Blood{} by {C:attention}+1🍷{}",
             
-            "{C:inactive}(Common:{} {C:red}-0.1🩸{}{C:inactive}, Uncommon:{} {C:red}+0.1🩸{}{C:inactive}, Rare:{} {C:red}+1🩸{}{C:inactive}, Legendary:{} {C:red}+10🩸{}{C:inactive}){}",
-            
             "{C:inactive}(Adolescent Witch + Magic Mirror + Canio){}"
         }
     },

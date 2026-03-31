@@ -1,5 +1,9 @@
 local GET_RAR = function (requested, fallback, mod)
-    return next(SMODS.find_mod(mod)) and requested or fallback
+    return HAS_MOD(mod) and requested or fallback
+end
+
+local HAS_MOD = function(mod) 
+    return next(SMODS.find_mod(mod)) ~= nil
 end
 
 UF = {
@@ -8,6 +12,10 @@ UF = {
 
     RARITY = {
         GET = GET_RAR,
+    },
+
+    MODS = {
+        CRYPTID = HAS_MOD("Cryptid")
     },
 
     U = {}

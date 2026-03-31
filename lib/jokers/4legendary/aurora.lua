@@ -16,7 +16,7 @@ SMODS.Joker {
     },
 
     loc_txt = {
-        name = "{C:red}Aurora, The Prophesied Cataclysm{}",
+        name = "{C:red}Aurora, The Prophesised Cataclysm{}",
         text = {
             "{C:inactive}Hope you like what I did with all her high quality blood~!{}",
             "{C:red}🩸#1#{} / {C:red}#2#🍷{}",
@@ -30,7 +30,6 @@ SMODS.Joker {
             "Played cards are {C:attention}Cleansed{}, but have a fixed {C:red}95%{} chance to die",
             "If they survive, they gain a permanent {C:red}Blood Stigmata{} sticker",
             "{C:inactive}(Ex: Converts Chips+10 into Chips+(10*#3#))",
-            "{C:inactive}(Common:{} {C:red}-0.1🩸{}{C:inactive}, Uncommon:{} {C:red}+0.1🩸{}{C:inactive}, Rare:{} {C:red}+1🩸{}{C:inactive}, Legendary:{} {C:red}+10🩸{}{C:inactive}){}",
             "{C:inactive}(The Dauntless Sojourner + The Blood Witch){}"
         }
     },
@@ -124,7 +123,7 @@ SMODS.Joker {
         and context.cardarea == G.play
         and not context.blueprint
         and context.destroy_card then
-            local numerator, denominator = 10, 20 -- todo: chang eto 19
+            local numerator, denominator = 19, 20
             local roll = pseudorandom(pseudoseed("aurora_card_death"))
             local kill = roll < (numerator / denominator)
 
@@ -133,8 +132,7 @@ SMODS.Joker {
             else
                 local c = context.destroy_card
                 c:add_sticker("ultrafusion_blood_stigmata", true)
-                c.ultrafusion_blood_stigmata = c.ultrafusion_blood_stigmata or {}
-                c.ultrafusion_blood_stigmata.aurora_data = card.ability.extra
+                c.ability.ultrafusion_blood_stigmata.aurora_data = card.ability.extra
             end
         end
     end
