@@ -153,7 +153,6 @@ FusionJokers.fusions:register_fusion{
     jokers = {
         { name = "j_ultrafusion_adolescent_witch" },
         { name = "j_ultrafusion_magic_mirror" },
-        { name = "j_caino" },
     },
     result_joker = "j_ultrafusion_blood_witch",
     cost = 14,

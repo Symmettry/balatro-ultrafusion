@@ -31,3 +31,38 @@ if next(SMODS.find_card("j_ultrafusion_aurora_the_prophesied_cataclysm")) then
 end
 '''
 match_indent = true
+
+[[patches]]
+[patches.pattern]
+target = '''card.lua'''
+pattern = '''        if self.ability.name == "Death" then
+            local rightmost = G.hand.highlighted[1]
+            for i=1, #G.hand.highlighted-1 do if G.hand.highlighted[i].T.x > rightmost.T.x then rightmost = G.hand.highlighted[i] end end
+            for i=1, #G.hand.highlighted do if SMODS.is_eternal(G.hand.highlighted[i]) and rightmost ~= G.hand.highlighted[i] then return false end end
+        end'''
+position = 'at'
+payload = '''
+if self.ability.name == "Death" then
+    local rightmost = G.hand.highlighted[1]
+    for i=1, #G.hand.highlighted-1 do
+        if G.hand.highlighted[i].T.x > rightmost.T.x then
+            rightmost = G.hand.highlighted[i]
+        end
+    end
+
+    if UF.U.BLOOD.has_blood_stigmata(rightmost) then
+        return false
+    end
+
+    for i=1, #G.hand.highlighted do
+        local c = G.hand.highlighted[i]
+        if SMODS.is_eternal(c) and rightmost ~= c then
+            return false
+        end
+        if rightmost ~= c and UF.U.BLOOD.has_blood_stigmata(c) then
+            return false
+        end
+    end
+end
+'''
+match_indent = true

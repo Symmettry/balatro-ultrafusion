@@ -28,7 +28,8 @@ SMODS.Sticker {
 
     calculate = function(self, card, context)
         if context.cardarea == G.play and context.main_scoring then
-            local amount = 2 ^ card.ability.ultrafusion_blood_stigmata.devotion
+            local devotion = card.ability.ultrafusion_blood_stigmata.devotion
+            local amount = 2 ^ devotion
             local upgrade = pseudorandom(pseudoseed("blood_stigmata_perma"))
             if upgrade < 0.2 then
                 UF.U.add_perma_bonus(card, amount)
@@ -41,6 +42,10 @@ SMODS.Sticker {
             else
                 UF.U.add_perma_dollars(card, amount)
             end
+
+            print(card.ability.ultrafusion_blood_stigmata.aurora_data)
+            print(devotion)
+
             return {
                 message = localize('k_upgrade_ex')
             }

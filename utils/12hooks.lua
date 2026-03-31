@@ -105,7 +105,9 @@ function UF.U.install_hooks()
 
     local smods_showman_ref = SMODS.showman
     function SMODS.showman(card_key)
-        if next(SMODS.find_card('j_ultrafusion_subwoofer')) or next(SMODS.find_card('j_ultrafusion_engineer')) or next(SMODS.find_card('j_ultrafusion_the_niflheim_experiment')) then
+        if next(SMODS.find_card('j_ultrafusion_subwoofer'))
+        or next(SMODS.find_card('j_ultrafusion_engineer'))
+        or next(SMODS.find_card('j_ultrafusion_the_niflheim_experiment')) then
             return true
         end
         return smods_showman_ref(card_key)
@@ -118,6 +120,35 @@ function UF.U.install_hooks()
         end
         return aurora_get_type_ref(self)
     end
+
+    local card_start_dissolve_ref = Card.start_dissolve
+    function Card:start_dissolve(dissolve_colours, silent, dissolve_time_fac, no_juice)
+        if UF.U.BLOOD.has_blood_stigmata(self) then
+            return
+        end
+        return card_start_dissolve_ref(self, dissolve_colours, silent, dissolve_time_fac, no_juice)
+    end
+
+    local card_can_sell_ref = Card.can_sell_card
+    function Card:can_sell_card(context)
+        if UF.U.BLOOD.has_blood_stigmata(self) then
+            self.getting_sliced = nil
+            return false
+        end
+        return card_can_sell_ref(self, context)
+    end
+
+    local copy_card_ref = copy_card
+    function copy_card(other, new_card, card_scale, playing_card, strip_edition)
+        local copied = copy_card_ref(other, new_card, card_scale, playing_card, strip_edition)
+
+        if copied and other and UF.U.BLOOD.has_blood_stigmata(other) then
+            UF.U.BLOOD.strip_blood_stigmata_copy(copied)
+        end
+
+        return copied
+    end
+
 end
 
 UF.U._card_get_id_ref = UF.U._card_get_id_ref or Card.get_id
@@ -130,5 +161,3 @@ function Card:get_id()
 
     return id
 end
-
-UF.U.install_hooks()

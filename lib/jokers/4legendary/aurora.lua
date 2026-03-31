@@ -118,7 +118,7 @@ SMODS.Joker {
         end
 
         -- =========================================================
-        -- Played cards: cleanse + 95% death
+        -- Played cards: 95% death
         -- =========================================================
         if context.destroy_card
         and context.cardarea == G.play
@@ -131,7 +131,10 @@ SMODS.Joker {
             if not card.ability.ultrafusion_blood_stigmata and kill then
                 return { remove = true }
             else
-                context.destroy_card:add_sticker("ultrafusion_blood_stigmata", true)
+                local c = context.destroy_card
+                c:add_sticker("ultrafusion_blood_stigmata", true)
+                c.ultrafusion_blood_stigmata = c.ultrafusion_blood_stigmata or {}
+                c.ultrafusion_blood_stigmata.aurora_data = card.ability.extra
             end
         end
     end

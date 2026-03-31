@@ -1,0 +1,1 @@
+UF.U.install_hooks()
