@@ -44,3 +44,13 @@ function UF.U.merge_joker_effects(a, b)
 
 	return out
 end
+
+function UF.U.GAME_OVER() 
+    G.E_MANAGER:add_event(Event({
+        func = function()
+            G.STATE = G.STATES.GAME_OVER
+            G.STATE_COMPLETE = false
+            return true
+        end
+    }))
+end

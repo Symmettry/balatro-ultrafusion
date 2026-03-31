@@ -110,6 +110,14 @@ function UF.U.install_hooks()
         end
         return smods_showman_ref(card_key)
     end
+
+    local aurora_get_type_ref = Blind.get_type
+    function Blind:get_type()
+        if next(SMODS.find_card("j_ultrafusion_aurora_the_prophesied_cataclysm")) and not G.GAME.blind.in_blind then
+            return G.GAME.blind_on_deck
+        end
+        return aurora_get_type_ref(self)
+    end
 end
 
 UF.U._card_get_id_ref = UF.U._card_get_id_ref or Card.get_id
