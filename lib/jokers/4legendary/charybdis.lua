@@ -28,6 +28,7 @@ SMODS.Joker {
 			"copies of the leftmost consumable",
 			"If played hand is exactly {C:attention}three 6's{}, create",
 			"{C:attention}#6#{} truly random consumables",
+            "{C:inactive}Capable of temporarily freezing the witch{}",
 			"{C:inactive}\"It just ain't natural!\"{}"
 		}
 	},

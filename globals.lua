@@ -15,7 +15,8 @@ UF = {
     },
 
     MODS = {
-        CRYPTID = HAS_MOD("Cryptid")
+        CRYPTID = HAS_MOD("Cryptid"),
+        POLTERWORX = HAS_MOD("jen"),
     },
 
     U = {}

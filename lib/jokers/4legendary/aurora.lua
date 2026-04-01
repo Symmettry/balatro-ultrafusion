@@ -62,6 +62,7 @@ SMODS.Joker {
     end,
 
     remove_from_deck = function(self, card, from_debuff)
+        if next(SMODS.find_card("j_ultrafusion_charybdis_the_progenitor_of_the_frost")) then return end
         UF.U.GAME_OVER()
     end,
 

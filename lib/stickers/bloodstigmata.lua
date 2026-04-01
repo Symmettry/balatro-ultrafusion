@@ -47,7 +47,7 @@ SMODS.Sticker {
             print(aurora.blood, aurora.min_blood + devotion)
             if aurora.blood > aurora.min_blood + devotion then
                 aurora.blood = aurora.blood - devotion
-                card.ability.ultrafusion_blood_stigmata.devotion = devotion + 1
+                card.ability.ultrafusion_blood_stigmata.devotion = math.min(666, devotion + 1)
             end
 
             return {
