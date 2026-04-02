@@ -10,11 +10,11 @@ pattern = '''if G.GAME.round_resets.blind == G.P_BLINDS.bl_small then'''
 position = 'at'
 payload = '''
 if (next(SMODS.find_card("j_ultrafusion_aurora_the_prophesied_cataclysm")) or next(SMODS.find_card("j_ultrafusion_there_will_be_blood"))) and G.GAME.blind_on_deck ~= 'Boss' then
-	if G.GAME.blind_on_deck == 'Small' then
-		G.GAME.round_resets.blind_states.Small = 'Defeated'
-	elseif G.GAME.blind_on_deck == 'Big' then
-		G.GAME.round_resets.blind_states.Big = 'Defeated'
-	end
+    if G.GAME.blind_on_deck == 'Small' then
+        G.GAME.round_resets.blind_states.Small = 'Defeated'
+    elseif G.GAME.blind_on_deck == 'Big' then
+        G.GAME.round_resets.blind_states.Big = 'Defeated'
+    end
 elseif G.GAME.round_resets.blind == G.P_BLINDS.bl_small then
 '''
 match_indent = true
@@ -26,11 +26,11 @@ pattern = '''G.GAME.round_resets.boss_rerolled = false'''
 position = 'before'
 payload = '''
 if next(SMODS.find_card("j_ultrafusion_there_will_be_blood")) then
-	G.GAME.round_resets.blind_choices.Big = get_new_boss()
-	G.GAME.round_resets.blind_choices.Small = get_new_boss()
+    G.GAME.round_resets.blind_choices.Big = get_new_boss()
+    G.GAME.round_resets.blind_choices.Small = get_new_boss()
 elseif next(SMODS.find_card("j_ultrafusion_aurora_the_prophesied_cataclysm")) then
-	G.GAME.round_resets.blind_choices.Big = get_new_boss()
-	G.GAME.round_resets.blind_choices.Small = get_new_boss()
+    G.GAME.round_resets.blind_choices.Big = get_new_boss()
+    G.GAME.round_resets.blind_choices.Small = get_new_boss()
 end
 '''
 match_indent = true

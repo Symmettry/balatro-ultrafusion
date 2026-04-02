@@ -19,7 +19,9 @@ UF = {
         POLTERWORX = HAS_MOD("jen"),
     },
 
-    U = {}
+    INCREASE_WEIGHT = 10,
+
+    U = {},
 }
 
 local function load_desc(name, tooltip_key, desc_key)

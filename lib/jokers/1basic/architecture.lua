@@ -1,99 +1,99 @@
 SMODS.Joker {
-	key = "architecture",
+    key = "architecture",
 
-	rarity = "fusion",
-	blueprint_compat = true,
-	cost = 12,
+    rarity = "fusion",
+    blueprint_compat = true,
+    cost = 12,
 
-	loc_txt = {
-		name = "Architecture",
-		text = {
-			"Copies the effects of up to",
-			"two Jokers to the {C:attention}right{}",
-			"Retriggers the Joker to the",
-			"{C:attention}left{} {C:attention}2{} additional times",
-			"{C:inactive}(Blueprint + Brainstorm){}"
-		}
-	},
+    loc_txt = {
+        name = "Architecture",
+        text = {
+            "Copies the effects of up to",
+            "two Jokers to the {C:attention}right{}",
+            "Retriggers the Joker to the",
+            "{C:attention}left{} {C:attention}2{} additional times",
+            "{C:inactive}(Blueprint + Brainstorm){}"
+        }
+    },
 
-	loc_vars = function(self, info_queue, card)
-		if card.area and card.area == G.jokers then
-			local left_joker = nil
-			local right_joker_1 = nil
-			local right_joker_2 = nil
+    loc_vars = function(self, info_queue, card)
+        if card.area and card.area == G.jokers then
+            local left_joker = nil
+            local right_joker_1 = nil
+            local right_joker_2 = nil
 
-			for i = 1, #G.jokers.cards do
-				if G.jokers.cards[i] == card then
-					left_joker = G.jokers.cards[i - 1]
-					right_joker_1 = G.jokers.cards[i + 1]
-					right_joker_2 = G.jokers.cards[i + 2]
-					break
-				end
-			end
+            for i = 1, #G.jokers.cards do
+                if G.jokers.cards[i] == card then
+                    left_joker = G.jokers.cards[i - 1]
+                    right_joker_1 = G.jokers.cards[i + 1]
+                    right_joker_2 = G.jokers.cards[i + 2]
+                    break
+                end
+            end
 
-			local compatible_1 = right_joker_1
-				and right_joker_1 ~= card
-				and right_joker_1.config
-				and right_joker_1.config.center
-				and right_joker_1.config.center.blueprint_compat
+            local compatible_1 = right_joker_1
+                and right_joker_1 ~= card
+                and right_joker_1.config
+                and right_joker_1.config.center
+                and right_joker_1.config.center.blueprint_compat
 
-			local compatible_2 = right_joker_2
-				and right_joker_2 ~= card
-				and right_joker_2.config
-				and right_joker_2.config.center
-				and right_joker_2.config.center.blueprint_compat
+            local compatible_2 = right_joker_2
+                and right_joker_2 ~= card
+                and right_joker_2.config
+                and right_joker_2.config.center
+                and right_joker_2.config.center.blueprint_compat
 
-			local compatibility_text =
-				localize('k_' .. (compatible_1 and 'compatible' or 'incompatible'))
-				.. "/"
-				.. localize('k_' .. (compatible_2 and 'compatible' or 'incompatible'))
+            local compatibility_text =
+                localize('k_' .. (compatible_1 and 'compatible' or 'incompatible'))
+                .. "/"
+                .. localize('k_' .. (compatible_2 and 'compatible' or 'incompatible'))
 
-			local both_compatible = compatible_1 and compatible_2
-			local both_incompatible = (not compatible_1) and (not compatible_2)
+            local both_compatible = compatible_1 and compatible_2
+            local both_incompatible = (not compatible_1) and (not compatible_2)
 
-			local badge_colour = both_compatible
-				and mix_colours(G.C.GREEN, G.C.JOKER_GREY, 0.8)
-				or (both_incompatible
-					and mix_colours(G.C.RED, G.C.JOKER_GREY, 0.8)
-					or mix_colours(G.C.BLUE, G.C.JOKER_GREY, 0.8))
+            local badge_colour = both_compatible
+                and mix_colours(G.C.GREEN, G.C.JOKER_GREY, 0.8)
+                or (both_incompatible
+                    and mix_colours(G.C.RED, G.C.JOKER_GREY, 0.8)
+                    or mix_colours(G.C.BLUE, G.C.JOKER_GREY, 0.8))
 
-			local main_end = {
-				{
-					n = G.UIT.C,
-					config = { align = "bm", minh = 0.4 },
-					nodes = {
-						{
-							n = G.UIT.C,
-							config = {
-								ref_table = card,
-								align = "m",
-								colour = badge_colour,
-								r = 0.05,
-								padding = 0.06
-							},
-							nodes = {
-								{
-									n = G.UIT.T,
-									config = {
-										text = ' ' .. compatibility_text .. ' ',
-										colour = G.C.UI.TEXT_LIGHT,
-										scale = 0.32 * 0.8
-									}
-								},
-							}
-						}
-					}
-				}
-			}
+            local main_end = {
+                {
+                    n = G.UIT.C,
+                    config = { align = "bm", minh = 0.4 },
+                    nodes = {
+                        {
+                            n = G.UIT.C,
+                            config = {
+                                ref_table = card,
+                                align = "m",
+                                colour = badge_colour,
+                                r = 0.05,
+                                padding = 0.06
+                            },
+                            nodes = {
+                                {
+                                    n = G.UIT.T,
+                                    config = {
+                                        text = ' ' .. compatibility_text .. ' ',
+                                        colour = G.C.UI.TEXT_LIGHT,
+                                        scale = 0.32 * 0.8
+                                    }
+                                },
+                            }
+                        }
+                    }
+                }
+            }
 
-			return {
-				vars = {},
-				main_end = main_end
-			}
-		end
+            return {
+                vars = {},
+                main_end = main_end
+            }
+        end
 
-		return { vars = {} }
-	end,
+        return { vars = {} }
+    end,
 
     calculate = function(self, card, context)
         local left_joker = nil
@@ -136,10 +136,10 @@ SMODS.Joker {
 }
 
 FusionJokers.fusions:register_fusion{
-	jokers = {
-		{ name = "j_blueprint" },
-		{ name = "j_brainstorm" },
-	},
-	result_joker = "j_ultrafusion_architecture",
-	cost = 12,
+    jokers = {
+        { name = "j_blueprint" },
+        { name = "j_brainstorm" },
+    },
+    result_joker = "j_ultrafusion_architecture",
+    cost = 12,
 }
