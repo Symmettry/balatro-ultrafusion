@@ -20,6 +20,7 @@ UF = {
     },
 
     INCREASE_WEIGHT = 10,
+    USED_INCREASE_WEIGHT = 10,
 
     U = {},
 }

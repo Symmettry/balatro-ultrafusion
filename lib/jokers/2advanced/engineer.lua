@@ -29,7 +29,7 @@ SMODS.Joker {
     loc_vars = function(self, info_queue, card)
         local missing_cards = math.max(
             0,
-            (G.GAME and G.GAME.starting_deck_size or 52) - (G.playing_cards and #G.playing_cards or 0)
+            (G.GAME and G.GAME.starting_deck_size or 52) - (#G.deck.cards or 0)
         )
 
         return {
@@ -46,7 +46,7 @@ SMODS.Joker {
         if context.individual
         and context.cardarea == G.play
         and context.other_card then
-            local missing_cards = math.max(0, G.GAME.starting_deck_size - #G.playing_cards)
+            local missing_cards = math.max(0, G.GAME.starting_deck_size - #G.deck.cards)
 
             if missing_cards > 0 then
                 return {

@@ -110,7 +110,7 @@ function SMODS.calculate_context(context, return_table)
                 for i = 1, #fusions do
                     local other = fusions[i]
                     if next(SMODS.find_card(other)) then
-                        entry.weight = UF.INCREASE_WEIGHT
+                        entry.weight = UF.USED_INCREASE_WEIGHT
                     end
                 end
             end

@@ -26,3 +26,4 @@ load_mod_files("utils")
 load_mod_files("lib")
 
 LOAD("fusionweights.lua")
+LOAD("modhooks.lua")
