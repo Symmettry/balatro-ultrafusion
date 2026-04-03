@@ -1,6 +1,6 @@
 SMODS.current_mod.optional_features = function()
     return {
-        object_weights = true
+        -- object_weights = true -- currently broken :skull:
     }
 end
 

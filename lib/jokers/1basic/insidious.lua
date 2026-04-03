@@ -1,7 +1,7 @@
 SMODS.Joker {
     key = "insidious",
 
-    -- atlas = "jokers_142x190",
+    -- atlas = "jokers_71x95"",
     -- pos = { x = 1, y = 0 },
 
     rarity = "fusion",

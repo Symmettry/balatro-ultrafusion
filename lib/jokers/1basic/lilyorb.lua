@@ -1,7 +1,7 @@
 SMODS.Joker {
     key = "lil_yorb",
     
-    -- atlas = "jokers_142x190",
+    -- atlas = "jokers_71x95"",
     -- pos = { x = 6, y = 0 },
 
     rarity = "fusion",

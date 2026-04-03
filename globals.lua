@@ -32,11 +32,19 @@ local function load_desc(name, tooltip_key, desc_key)
     }
 end
 
-SMODS.current_mod.process_loc_text = function()
-end
-
 GIVE_JOKER = function(joker) 
     local c = create_card("Joker", G.jokers, nil, nil, nil, nil, joker);
     c:add_to_deck();
     G.jokers:emplace(c);
+end
+
+local set_edition_ref = Card.set_edition
+function Card:set_edition(edition, immediate, silent)
+    if edition == nil then return nil end
+    for i=1, #edition do
+        if not G.P_CENTERS[edition[i]] then
+            return nil
+        end
+    end
+    return set_edition_ref(self, edition, immediate, silent)
 end

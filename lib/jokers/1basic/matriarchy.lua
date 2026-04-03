@@ -1,7 +1,7 @@
 SMODS.Joker {
     key = "matriarchy",
     
-    -- atlas = "jokers_142x190",
+    -- atlas = "jokers_71x95"",
     -- pos = { x = 2, y = 0 },
 
     rarity = "fusion",

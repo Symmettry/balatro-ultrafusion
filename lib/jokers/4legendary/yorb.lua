@@ -1,7 +1,7 @@
 SMODS.Joker {
     key = "yorb_galactic_menace",
     
-    -- atlas = "jokers_142x190",
+    -- atlas = "jokers_71x95"",
     -- pos = { x = 9, y = 0 },
 
     rarity = "ultrafusion_legfusion",
