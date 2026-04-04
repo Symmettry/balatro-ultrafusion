@@ -1,0 +1,20 @@
+[manifest]
+version = "1.0.0"
+dump_lua = false
+priority = 0
+
+[[patches]]
+[patches.pattern]
+target = "card.lua"
+pattern = '''                local _size = math.max(1, self.ability.extra + (G.GAME.modifiers.booster_size_mod or 0))'''
+position = "after"
+payload = '''
+                if type(_size) ~= "number" then
+                    if type(_size) == "table" then
+                        _size = tonumber(_size[2]) or tonumber(_size[1]) or 1
+                    else
+                        _size = tonumber(_size) or 1
+                    end
+                end
+'''
+match_indent = true
