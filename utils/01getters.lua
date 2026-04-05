@@ -31,25 +31,25 @@ function UF.U.scoring_hand(context)
 end
 
 function UF.U.played_size(context)
-    return #U.played_hand(context)
+    return #UF.U.played_hand(context)
 end
 
 function UF.U.scoring_size(context)
-    return #U.scoring_hand(context)
+    return #UF.U.scoring_hand(context)
 end
 
 function UF.U.hands_played()
-    return (U.round() and UF.U.round().hands_played) or 0
+    return (UF.U.round() and UF.U.round().hands_played) or 0
 end
 
 function UF.U.hands_left()
-    return (U.round() and UF.U.round().hands_left) or 0
+    return (UF.U.round() and UF.U.round().hands_left) or 0
 end
 
 function UF.U.discards_left()
-    return (U.round() and UF.U.round().discards_left) or 0
+    return (UF.U.round() and UF.U.round().discards_left) or 0
 end
 
 function UF.U.ante()
-    return (U.round_resets() and UF.U.round_resets().ante) or 0
+    return (UF.U.round_resets() and UF.U.round_resets().ante) or 0
 end

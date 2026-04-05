@@ -29,7 +29,8 @@ SMODS.Joker {
             "If played hand is exactly {C:attention}three 6's{}, create",
             "{C:attention}#6#{} truly random consumables",
             "{C:inactive}Capable of temporarily freezing the witch{}",
-            "{C:inactive}\"It just ain't natural!\"{}"
+            "{C:inactive}\"It just ain't natural!\"{}",
+            "{C:inactive}(The Niflheim Experiment + The Foretold Devil){}"
         }
     },
 
@@ -98,11 +99,7 @@ SMODS.Joker {
             end
 
             if leftmost_consumable and G.consumeables and G.consumeables.config then
-                local copies_to_make = math.min(
-                    card.ability.extra.copies,
-                    math.max(0, G.consumeables.config.card_limit - #G.consumeables.cards)
-                )
-
+                local copies_to_make = card.ability.extra.copies
                 for i = 1, copies_to_make do
                     G.E_MANAGER:add_event(Event({
                         func = function()
@@ -150,11 +147,7 @@ SMODS.Joker {
                     end
                 end
 
-                local copies_to_make = math.min(
-                    card.ability.extra.random_copies,
-                    math.max(0, G.consumeables.config.card_limit - #G.consumeables.cards)
-                )
-
+                local copies_to_make = card.ability.extra.random_copies
                 for i = 1, copies_to_make do
                     G.E_MANAGER:add_event(Event({
                         func = function()
